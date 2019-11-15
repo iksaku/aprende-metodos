@@ -15,9 +15,11 @@ Auth::routes([
     'register' => true,
     'reset' => false,
     'confirm' => false,
-    'verify' => false
+    'verify' => false,
 ]);
 
-Route::get('/', function () {
-    return view('welcome');
+Route::middleware('auth')->group(function () {
+    Route::get('/', 'IndexController@index')->name('index');
+
+    Route::get('method/{method}', 'MethodController@method')->name('method');
 });

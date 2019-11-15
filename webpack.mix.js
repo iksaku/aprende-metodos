@@ -12,14 +12,13 @@ require('laravel-mix-purgecss');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/styles/nprogress.pcss', 'public/css')
+mix
+    //.js('resources/js/app.js', 'public/js')
     .postCss('resources/styles/app.pcss', 'public/css', [
         require('tailwindcss'),
         require('postcss-nested')
-    ])
-    .browserSync('aprende-metodos.test');
+    ]);
 
 if (mix.inProduction()) {
-    mix.purgeCss().version()
+    mix.purgeCss().version();
 }
