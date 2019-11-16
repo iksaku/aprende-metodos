@@ -10,4 +10,14 @@ class MethodController extends Controller
     {
         return view('app.method', compact('method'));
     }
+
+    public function exercise(Method $method)
+    {
+        $user = Auth::user();
+        
+        // Ensure the user is only related once
+        $method->users()->syncWithoutDetaching($user);
+
+        // TODO Return view with exercise
+    }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUserMethodTable extends Migration
+class CreateMethodUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,20 +13,20 @@ class CreateUserMethodTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_method', function (Blueprint $table) {
-            $table->unsignedBigInteger('user_id');
+        Schema::create('method_user', function (Blueprint $table) {
             $table->unsignedBigInteger('method_id');
-            $table->integer('attempt');
-            $table->boolean('completed');
-
-            $table->foreign('user_id')
-                ->references('id')
-                ->on('users')
-                ->onDelete('cascade');
+            $table->unsignedBigInteger('user_id');
+            $table->integer('attempt')->default(0);
+            $table->boolean('completed')->default(false);
 
             $table->foreign('method_id')
                 ->references('id')
                 ->on('methods')
+                ->onDelete('cascade');
+
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
                 ->onDelete('cascade');
         });
     }

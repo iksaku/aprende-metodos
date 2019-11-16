@@ -1,6 +1,7 @@
 <?php
 
 use App\Topic;
+use App\Method;
 use Illuminate\Database\Seeder;
 
 class TopicSeeder extends Seeder
@@ -69,21 +70,29 @@ class TopicSeeder extends Seeder
             ],
         ];
 
-        $content = $faker->paragraphs(6, true);
-
         foreach ($topics as $topicData) {
-            $topic = Topic::create([
+            $topic = Topic::firstOrCreate([
                 'name' => $topicData['name'],
             ]);
 
-            $topic->methods()->createMany(
-                collect($topicData['methods'])
-                    ->map(function ($name) use ($content) {
-                        $slug = Str::slug($name);
+            foreach ($topic->methods as $method) {
+                $method->delete();
+            }
 
-                        return compact('slug', 'name', 'content');
-                    })
-            );
+            foreach ($topicData['methods'] as $methodName) {
+                $name = $methodName;
+                $slug = Str::slug($name);
+                $content = $faker->paragraphs(6, true);
+
+                $method = $topic->methods()->create(compact('slug', 'name', 'content'));
+
+                for ($i = 0; $i < 4; ++$i) {
+                    $method->exercises()->create([
+                        'content' => $faker->text,
+                        'answer' => 1
+                    ]);
+                }
+            }
         }
     }
 }

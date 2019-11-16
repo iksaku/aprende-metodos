@@ -2,20 +2,20 @@
 
 @section('body')
     <div class="h-full w-full flex flex-col items-center justify-center p-4">
-        <h1 class="text-gray-700 text-4xl font-bold mb-10">
-            @lang('Register')
+        <h1 class="text-gray-700 text-4xl font-bold mb-8">
+            Registrate
         </h1>
 
         <form
             method="post"
             action="{{ route('register') }}"
-            class="max-w-sm w-full p-8 rounded-lg border border-gray-300 shadow-lg bg-gray-100"
+            class="max-w-sm w-full p-8 rounded-lg border border-gray-400 shadow-lg bg-gray-100"
         >
             @csrf
 
             <label class="w-full block mb-4">
                 <span class="text-gray-700 text-sm font-bold">
-                    @lang('Name')
+                    Nombre
                 </span>
                 <input
                     required
@@ -54,7 +54,7 @@
 
             <label class="w-full block mb-4">
                 <span class="text-gray-700 text-sm font-bold">
-                    @lang('Password')
+                    Contraseña
                 </span>
                 <input
                     required
@@ -72,7 +72,7 @@
 
             <label class="w-full block mb-4">
                 <span class="text-gray-700 text-sm font-bold">
-                    @lang('Confirm Password')
+                    Confirmar Contraseña
                 </span>
                 <input
                     required
@@ -91,17 +91,17 @@
             <div class="w-full block flex items-center justify-end mb-4">
                 <button
                     type="submit"
-                    class="w-1/3 px-4 py-2 text-gray-100 font-bold bg-blue-500 hover:bg-blue-700 focus:bg-blue-700 rounded-lg"
+                    class="w-full md:w-auto px-4 py-2 text-gray-100 font-bold bg-blue-500 hover:bg-blue-700 focus:bg-blue-700 rounded-lg"
                 >
-                    @lang('Register')
+                    Registrar
                 </button>
             </div>
 
             <div class="w-full block">
                 <p class="text-sm text-gray-700 text-center">
-                    @lang('Already registered?')
-                    <a href="{{ route('login') }}" class="text-blue-500 hover:text-blue-700 focus:text-blue-700">
-                        @lang('Login here')
+                    ¿Ya te encuentras registrado?
+                    <a href="{{ route('login') }}" class="block md:inline text-blue-500 hover:text-blue-700 focus:text-blue-700">
+                        Inicia Sesión aquí
                     </a>
                 </p>
             </div>

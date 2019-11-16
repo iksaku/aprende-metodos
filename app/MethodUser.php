@@ -20,7 +20,7 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\UserMethod whereUserId($value)
  * @mixin \Eloquent
  */
-class UserMethod extends Pivot
+class MethodUser extends Pivot
 {
     /** @var array */
     protected $fillable = [
@@ -32,4 +32,9 @@ class UserMethod extends Pivot
         'attempt' => 'integer',
         'completed' => 'boolean',
     ];
+
+    public function scopeIsCompleted($query)
+    {
+        $query->where('completed', true);
+    }
 }

@@ -2,9 +2,9 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 /**
  * App\User.
@@ -67,10 +67,15 @@ class User extends Authenticatable
     public function methods()
     {
         return $this->belongsToMany(Method::class)
-            ->using(UserMethod::class)
+            ->using(MethodUser::class)
             ->withPivot([
                 'attempt',
                 'completed',
             ]);
+    }
+
+    public function completedMethods()
+    {
+        return $this->methods()->wherePivot('completed', true)->get();
     }
 }

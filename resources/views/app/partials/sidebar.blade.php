@@ -1,4 +1,4 @@
-<div class="w-1/4 p-4 overflow-y-auto scrolling-touch text-gray-700 border-r border-gray-400 shadow-inner">
+<div class="w-1/4 p-4 pr-0 overflow-y-auto scrolling-touch text-gray-700 border-r border-gray-400 shadow-inner">
     <div class="w-full mb-8">
         <span class="font-bold uppercase">
             <a href="{{ route('index') }}">
