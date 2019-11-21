@@ -3,9 +3,9 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * App\Method.
@@ -60,7 +60,7 @@ class Method extends Model
      */
     public function exercises()
     {
-        return $this->hasMany(Exercises::class);
+        return $this->hasMany(Exercise::class);
     }
 
     /**
@@ -72,7 +72,7 @@ class Method extends Model
             ->using(MethodUser::class)
             ->withPivot([
                 'attempt',
-                'completed'
+                'completed',
             ]);
     }
 }

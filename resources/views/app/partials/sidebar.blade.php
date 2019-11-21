@@ -2,7 +2,7 @@
     <div class="w-full mb-8">
         <span class="font-bold uppercase">
             <a href="{{ route('index') }}">
-                @lang('Home')
+                Inicio
             </a>
         </span>
     </div>

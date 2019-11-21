@@ -5,9 +5,9 @@
         @include('app.partials.header')
 
         <div class="h-full w-full flex items-stretch">
-            @include('app.partials.sidebar')
+            @includeWhen($showSidebar ?? true, 'app.partials.sidebar')
 
-            <div class="h-full w-full p-4">
+            <div class="h-full w-full p-4 overflow-y-auto scrolling-touch">
                 @yield('content')
             </div>
         </div>

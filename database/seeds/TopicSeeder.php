@@ -1,7 +1,6 @@
 <?php
 
 use App\Topic;
-use App\Method;
 use Illuminate\Database\Seeder;
 
 class TopicSeeder extends Seeder
@@ -82,14 +81,14 @@ class TopicSeeder extends Seeder
             foreach ($topicData['methods'] as $methodName) {
                 $name = $methodName;
                 $slug = Str::slug($name);
-                $content = $faker->paragraphs(6, true);
+                $content = $faker->paragraphs(10, true);
 
                 $method = $topic->methods()->create(compact('slug', 'name', 'content'));
 
-                for ($i = 0; $i < 4; ++$i) {
+                for ($i = 0; $i < 4; $i++) {
                     $method->exercises()->create([
                         'content' => $faker->text,
-                        'answer' => 1
+                        'answer' => 1,
                     ]);
                 }
             }

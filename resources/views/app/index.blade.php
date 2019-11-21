@@ -2,10 +2,9 @@
 
 @section('content')
     <div class="h-full w-full">
-        <h2>Métodos Completados</h2>
-
         <p>
-            Has completado 0/0
+            Has completado
+            {{ $completedMethods }}/{{ $totalMethods }} métodos disponibles
         </p>
     </div>
 @endsection

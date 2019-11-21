@@ -21,5 +21,10 @@ Auth::routes([
 Route::middleware('auth')->group(function () {
     Route::get('/', 'IndexController@index')->name('index');
 
-    Route::get('method/{method}', 'MethodController@method')->name('method');
+    Route::prefix('method')->group(function () {
+        Route::get('{method}', 'MethodController@showMethod')->name('method');
+
+        Route::get('{method}/exercise', 'MethodController@showExercise')->name('method.exercise');
+        Route::post('{method}/exercise', 'MethodController@checkExercise');
+    });
 });
