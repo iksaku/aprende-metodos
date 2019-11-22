@@ -19,7 +19,6 @@ class CreateMethodsTable extends Migration
             $table->string('slug')->unique();
             $table->string('name');
             $table->longText('content');
-            $table->timestamps();
 
             $table->foreign('topic_id')
                 ->references('id')

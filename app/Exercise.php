@@ -28,10 +28,15 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  */
 class Exercise extends Model
 {
+    /** @var bool */
+    public $timestamps = false;
+
+    /** @var array */
     protected $fillable = [
         'content', 'answer',
     ];
 
+    /** @var array */
     protected $casts = [
         'answer' => 'float'
     ];

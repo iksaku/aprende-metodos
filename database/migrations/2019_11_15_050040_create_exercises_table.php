@@ -18,7 +18,6 @@ class CreateExercisesTable extends Migration
             $table->unsignedBigInteger('method_id');
             $table->longText('content');
             $table->string('answer');
-            $table->timestamps();
 
             $table->foreign('method_id')
                 ->references('id')

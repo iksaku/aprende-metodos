@@ -23,6 +23,9 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
  */
 class MethodUser extends Pivot
 {
+    /** @var bool */
+    public $timestamps = false;
+
     /** @var array */
     protected $fillable = [
         'attempt', 'completed',

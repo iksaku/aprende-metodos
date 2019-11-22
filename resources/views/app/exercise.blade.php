@@ -3,6 +3,8 @@
 
 @extends('app.partials.template', ['showSidebar' => false])
 
+@include('app.components.use-katex')
+
 @section('content')
     <div id="notice" class="h-full w-full rich-text flex flex-col items-center justify-center hidden">
         <h2>

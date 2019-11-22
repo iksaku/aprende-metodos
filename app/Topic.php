@@ -25,6 +25,9 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  */
 class Topic extends Model
 {
+    /** @var bool */
+    public $timestamps = false;
+
     /** @var array */
     protected $fillable = [
         'name',

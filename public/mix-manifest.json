@@ -1,3 +1,5 @@
 {
+    "/js/katex.js": "/js/katex.js",
+    "/css/katex.css": "/css/katex.css",
     "/css/app.css": "/css/app.css"
 }

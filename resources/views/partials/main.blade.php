@@ -13,7 +13,7 @@
         @stack('styles')
     </head>
 
-    <body class="bg-gray-200">
+    <body class="bg-gray-200 overflow-hidden">
         <div class="min-h-screen h-screen w-full">
             @yield('body')
         </div>

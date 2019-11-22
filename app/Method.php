@@ -34,6 +34,9 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  */
 class Method extends Model
 {
+    /** @var bool */
+    public $timestamps = false;
+
     /** @var array */
     protected $fillable = [
         'slug', 'name', 'content',

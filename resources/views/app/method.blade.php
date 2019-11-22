@@ -2,6 +2,8 @@
 
 @extends('app.partials.template')
 
+@include('app.components.use-katex')
+
 @section('content')
     <div class="w-full">
         @if($completed ?? false)
@@ -22,7 +24,7 @@
             @parsedown($method->content)
         </div>
 
-        @if(!$completed ?? true)
+        @if(!$completed && $method->exercises()->count() >= 1)
             <div class="w-full block text-center mt-8">
                 <a
                     href="{{ route('method.exercise', $method) }}"
