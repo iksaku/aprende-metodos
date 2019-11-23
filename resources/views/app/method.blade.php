@@ -24,7 +24,7 @@
             @parsedown($method->content)
         </div>
 
-        @if(!$completed && $method->exercises()->count() >= 1)
+        @if(!$completed && $method->exercises->count() >= 1)
             <div class="w-full block text-center mt-8">
                 <a
                     href="{{ route('method.exercise', $method) }}"

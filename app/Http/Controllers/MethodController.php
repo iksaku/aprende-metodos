@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Exercise;
+use App\Helpers\AnswerPipeline;
 use App\Method;
+use App\MethodUser;
+use App\Rules\AnswerRule;
 use App\User;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -11,7 +16,20 @@ class MethodController extends Controller
 {
     public function showMethod(Method $method)
     {
-        $pivot = $this->getPivotData(Auth::user(), $method);
+        $user = Auth::user();
+
+        /*$prev = Method::whereId($method->id - 1)->first();
+
+        if ($prev !== null) {
+            $prevData = $this->getPivotData($user, $prev);
+
+            if (empty($prevData) || !$prevData->completed) {
+                session()->flash('alert', 'Antes de avanzar a los siguientes métodos, por favor completa el método en curso.');
+                return redirect()->route('method', $prev);
+            }
+        }*/
+
+        $pivot = $this->getPivotData($user, $method);
 
         $completed = $pivot->completed ?? false;
 
@@ -22,62 +40,53 @@ class MethodController extends Controller
 
     public function showExercise(Method $method)
     {
-        // Get current logged user
         $user = Auth::user();
 
-        // Ensure the user is only related once
         $method->users()->syncWithoutDetaching($user);
 
-        // Fetch pivot data for current Method-User relationship
         $pivot = $this->getPivotData($user, $method);
 
         if ($pivot->completed) {
             return redirect()->route('method', $method);
         }
 
-        // Increase current attempt
         if (empty(session()->get('ttl'))) {
             $pivot->update(['attempt' => $pivot->attempt + 1]);
         }
 
-        // Fetch all exercises for current method
         $exercises = $method->exercises;
 
-        // Gets the exercise based on the current attempt
         $exercise = $exercises->get($pivot->attempt % $exercises->count());
 
-        // Creates a validation TTL token
         $ttlToken = session()->get('ttl', now()->addMinutes(15)->getTimestamp());
 
-        // Return exercise view along with exercise data and ttlToken
         return view('app.exercise', compact('method', 'exercise', 'ttlToken'));
     }
 
     public function checkExercise(Request $request, Method $method)
     {
         $ttl = $request->get('ttl');
-        // Abort if no ttlToken
-        if (empty($ttl) || now()->getTimestamp() > $ttl) {
-            abort(419);
-        }
+        if (empty($ttl) || now()->getTimestamp() > $ttl) abort(419);
 
         session()->flash('ttl', $ttl);
 
         $validatedData = $request->validate([
-            'answer' => 'required|numeric',
+            'answer' => ['required', new AnswerRule()]
         ]);
 
-        $answer = floor((float) $validatedData['answer'] * 10000) / 10000;
+        $userAnswer = AnswerPipeline::make($validatedData['answer']);
 
         $user = Auth::user();
 
+        /** @var MethodUser $pivot */
         $pivot = $this->getPivotData($user, $method);
+        /** @var Exercise[]|Collection $exercises */
         $exercises = $method->exercises;
+        /** @var Exercise $exercise */
         $exercise = $exercises->get($pivot->attempt % $exercises->count());
 
-        if ($exercise->answer === $answer) {
+        if (AnswerPipeline::make($exercise->answer) === $userAnswer) {
             $pivot->update(['completed' => true]);
-
             return redirect()->route('method', compact('method'));
         } else {
             session()->forget('ttl');

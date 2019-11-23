@@ -2,94 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c054debb-2cd4-48fe-9a16-f62a932dda65" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/seeds/data.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/katex.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_AMS-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_AMS-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_AMS-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Caligraphic-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Caligraphic-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Caligraphic-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Caligraphic-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Caligraphic-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Caligraphic-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Fraktur-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Fraktur-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Fraktur-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Fraktur-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Fraktur-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Fraktur-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Main-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Main-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Main-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Main-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Main-BoldItalic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Main-BoldItalic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Main-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Main-Italic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Main-Italic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Main-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Main-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Main-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Math-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Math-BoldItalic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Math-BoldItalic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Math-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Math-Italic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Math-Italic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_SansSerif-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_SansSerif-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_SansSerif-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_SansSerif-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_SansSerif-Italic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_SansSerif-Italic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_SansSerif-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_SansSerif-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_SansSerif-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Script-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Script-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Script-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Size1-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Size1-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Size1-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Size2-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Size2-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Size2-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Size3-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Size3-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Size3-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Size4-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Size4-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Size4-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Typewriter-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Typewriter-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/katex/dist/KaTeX_Typewriter-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/newton-diferencias-divididas/formula.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/katex.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/styles/katex.pcss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/app/components/use-katex.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/aprende_metodos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aprende_metodos.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.phpstorm.meta.php" beforeDir="false" afterPath="$PROJECT_DIR$/.phpstorm.meta.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_ide_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/_ide_helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exercise.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exercise.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Method.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Method.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/MethodUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/MethodUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Topic.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Topic.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_15_045958_create_topics_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_15_045958_create_topics_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_15_050005_create_methods_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_15_050005_create_methods_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_15_050040_create_exercises_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_15_050040_create_exercises_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/TopicSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/TopicSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/app/exercise.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/exercise.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/app/method.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/method.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/main.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/data.yml" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/data.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -146,6 +60,10 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/database/seeds/data.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/Http/Controllers/MethodController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -271,7 +189,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.17.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/img/newton-diferencias-divididas" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/img/newton-cotes-abiertas" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -287,7 +205,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/img/newton-diferencias-divididas" />
+      <recent name="$PROJECT_DIR$/public/img/newton-cotes-abiertas" />
+      <recent name="$PROJECT_DIR$/public/img" />
+      <recent name="$PROJECT_DIR$/public/img/newton-cotes-cerradas" />
+      <recent name="$PROJECT_DIR$/public/img/linea-recta" />
+      <recent name="$PROJECT_DIR$/public/img/lagrange" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views/app" />
@@ -324,9 +246,9 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="npm.watch" />
-      <item itemvalue="PHPUnit.phpunit.xml" />
       <item itemvalue="Node.js.webpack.mix.js" />
+      <item itemvalue="PHPUnit.phpunit.xml" />
+      <item itemvalue="npm.watch" />
     </list>
     <recent_temporary>
       <list>
@@ -366,7 +288,15 @@
       <workItem from="1574099352003" duration="5547000" />
       <workItem from="1574123737092" duration="38000" />
       <workItem from="1574291868262" duration="3236000" />
-      <workItem from="1574442756005" duration="11948000" />
+      <workItem from="1574442756005" duration="13198000" />
+      <workItem from="1574465676154" duration="2348000" />
+      <workItem from="1574471836035" duration="1928000" />
+      <workItem from="1574474761030" duration="1267000" />
+      <workItem from="1574479931377" duration="1175000" />
+      <workItem from="1574642968743" duration="9378000" />
+      <workItem from="1574656978702" duration="3344000" />
+      <workItem from="1574714051566" duration="4276000" />
+      <workItem from="1574721849905" duration="2118000" />
     </task>
     <servers />
   </component>

@@ -6,18 +6,14 @@
             </a>
         </div>
 
-        <div class="w-1/2 flex items-center justify-end">
-            <div id="user-menu-container" class="relative">
-                <button class="focus:outline-none focus:shadow-outline" onclick="toggleUserMenu()">
-                    {{ Auth::user()->name }}
-                </button>
+        <div id="user-menu-container">
+            <button class="focus:outline-none focus:shadow-outline" onclick="toggleUserMenu()">
+                {{ Auth::user()->name }}
+            </button>
 
-                <div id="user-menu" class="hidden absolute min-w-full p-4 mt-1 bg-gray-100 rounded-lg border border-gray-300 shadow">
-                    <ul class="w-full text-center">
-                        <li>
-                            @livewire('logout')
-                        </li>
-                    </ul>
+            <div class="relative w-full">
+                <div id="user-menu" class="min-w-full absolute right-0 p-4 mt-1 bg-gray-100 rounded-lg border border-gray-300 shadow hidden">
+                    @livewire('logout')
                 </div>
             </div>
         </div>

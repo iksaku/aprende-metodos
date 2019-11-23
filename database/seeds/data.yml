@@ -3,15 +3,15 @@ topics:
     methods:
       - name: 'Interpolación Lineal'
         content: |
-          El método de interpolación lineal funciona para unir dos puntos en una linea recta.
+          El método de interpolación líneal funciona para unir dos puntos en una línea recta.
 
-          Se utiliza una notaión de `g(x)` la cual designa que se trata de un polinomio de primer grado.
+          Se utiliza una notación de `g(x)` la cual designa que se trata de un polinomio de primer grado.
 
           Se tiene el término:
           $$
           f(b)-f(a)/b-a
           $$
-          El cuál presenta una aproximación con una diferencia divida a la primer derivada, esto quiere decir que si el intervalo es menor entre los datos que se tengan, la paroximación que se obtenga será mejor.
+          El cuál presenta una aproximación con una diferencia divida a la primer derivada, esto quiere decir que si el intérvalo es menor entre los datos que se tengan, la paroximación que se obtenga será mejor.
 
 
           ### ¿Como resolver un ejercicio de interpolación lineal?
@@ -21,13 +21,13 @@ topics:
           x=7
           $$
 
-          2. Suponga que tiene Ln 6 y Ln 2, calcule el valor de estos valores con su calculadora cientifica.
+          2. Suponga que tiene Ln 6 y Ln 2, cálcule el valor de estos valores con su cálculadora científica.
           $$
           Ln 6= 1.791759469 \newline
           Ln 2= 0.69314718
           $$
 
-          3. Tome como valor de a el primer valor de Ln (sin calcular) y como valor de b el segundo valor de Ln (sin calcular).
+          3. Tome como valor de a el primer valor de Ln (sin cálcular) y como valor de b el segundo valor de Ln (sin cálcular).
           $$
           a=6 \newline
           b=2
@@ -39,13 +39,13 @@ topics:
           f(b)= 0.69314718
           $$
 
-          5. Para obtener el valor de g(x), utilice la formula:
+          5. Para obtener el valor de g(x), utilice la fórmula:
           $$
           g(x)= f(a)-f(b)/b-a (x-a) + f(a)
           $$
         exercises:
           - content: |
-              Resuelva el siguiente ejercicio por el método de interpolación lineal.
+              Resuelva el siguiente ejercicio por el método de interpolación líneal.
 
               Considere:
               $$
@@ -76,6 +76,9 @@ topics:
               E:|\ln{x}-g(x)|
               $$
             answer: 27.11916234
+          - content: |
+              Estimar el Ln de 4 mediante interpolación lineal. En los intervales de ln2 y ln5
+            answer: 0.082286692
       - name: 'Newton hacia Adelante'
         content: |
 
@@ -93,12 +96,12 @@ topics:
           |  X3  |  1.6  |  2.54  |
 
 
-          Para determinar si los intervalos son o no uniformes es necesario utilizar la siguiente formula:
+          Para determinar si los intérvalos son o no uniformes es necesario utilizar la siguiente fórmula:
           $$
           h1= |X2 - X1|= |1.3 - 1.0|= 0.3 \newline
           h2= |X3 - X2|= |1.6 - 1.3|= 0.3
           $$
-          Los intervalos si son uniformes.
+          Los intérvalos si son uniformes.
 
 
           Con los respectivos valores de X y Y, obtenga el valor de ∆'f(Xi):
@@ -114,7 +117,7 @@ topics:
           $$
 
 
-          Calcule ahora el valor de S, con la formula:
+          Cálcule ahora el valor de S, con la fórmula:
           $$
           S= X - Xi/h \newline
           S= 1.5 - 1.0/0.3 \newline
@@ -131,7 +134,7 @@ topics:
           $$
 
 
-          Determine el valor de g(x) utilizando la siguiente formula:
+          Determine el valor de g(x) utilizando la siguiente fórmula:
           $$
           g(x)= Y1(SO)+∆'f(Xi)(S1)+∆'2f(Xi)((S-(n-1))/n!) \newline
           g(x)=0.581666686
@@ -164,7 +167,7 @@ topics:
               | X3 | 4.0 | 4.49 |
             answer: 4.9
           - content: |
-              Resuelva el siguiente ejercicio
+              Resuelva el siguiente ejercicio:
 
               Considere para g(x) con:
               $$
@@ -179,7 +182,7 @@ topics:
             answer: 3.615
       - name: 'Newton hacia Atras'
         content: |
-          El método de Newton hacia atras requiere de intervalos uniformes al igual que el método de Newton hacia adelante.
+          El método de Newton hacia atrás requiere de intérvalos uniformes al igual que el método de Newton hacia adelante.
 
           Obtenga el valor de h, de la misma forma que el método anterior.
 
@@ -199,10 +202,10 @@ topics:
           h1= |X2 - X1|= |1.3 - 1.0|= 0.3 \newline
           h2= |X3 - X2|= |1.6 - 1.3|= 0.3
           $$
-          Los intervalos si son uniformes
+          Los intérvalos si son uniformes
 
 
-          Una vez calculado el valor de h y despues de determinar si son valores uniformes o no uniformes, calcule el valor de S, con su respectiva formula:
+          Una vez calculado el valor de h y después de determinar si son valores uniformes o no uniformes, calcule el valor de S, con su respectiva formula:
           $$
           S= X - Xi/h \newline
           S= 1.5 - 1.0/ 0.3 \newline
@@ -228,8 +231,32 @@ topics:
           g(x)= 2.54(1)+2.54(1.66666667)+(-1.33)([1.66666667(1.66666667+1)/2!]) \newline
           $$
 
-          Resultado= 2.54
-        exercises: []
+          Resultado:
+          $$
+          g(x)= 2.54
+          $$
+        exercises:
+          - content: |
+              Obtener g(x) para x = 2
+              |X|Y|
+              |-|-|
+              |3.1|2.31|
+              |2.8|2.54|
+              |2.5|2.81|
+              |2.2|3.21|
+              |1.9|3.99|
+              |1.6|4.75|
+            answer: 3.6879
+          - content: |
+              Obtener g(x) para x = 3.25
+
+              |X|Y|
+              |-|-|
+              |2|3.03|
+              |2.5|3.48|
+              |3|4.08|
+              |3.5|4.87|
+            answer: 4.44875
       - name: 'Newton con Diferencias Divididas'
         content: |
           Sea fn  una variable discreta de n elementos y sea xn   otra variable discreta de n elementos los cuales corresponden, por parejas, a la imagen u ordenada y abcisa de los datos que se quieran interpolar, respectivamente.
@@ -249,7 +276,7 @@ topics:
           Una vez se hayan realizado todos los cálculos, nótese que hay (muchas) más diferencias divididas que coeficientes aj. El cálculo de todos los términos intermedios debe realizarse simplemente porque son necesarios para poder formar todos los términos finales.
         exercises:
           - content: |
-              Aproxime el valor  Obtener por interpolacion el valor para x = 3 conocidos los valores x0 = 0, y0 = -1;
+              Obtener por interpolacion el valor para x = 3 conocidos los valores x0 = 0, y0 = -1;
               x1 = 1, y1 = 0; x2 = 2, y2 = 7; x3 = 4, y3 = 63.
 
               ### Bibliografia:
@@ -260,7 +287,7 @@ topics:
 
               x    0     0.2 	0.4 	0.6 	0.8
 
-              ### Bibliografia:
+              ### Bibliografía:
               - Quesada, J. G. (2 de Octubre de 2000). Tutorial de Analisis Numerico . Interpolacion : Formula de Newton . España.
             answer: 1.05126
           - content: |
@@ -271,79 +298,940 @@ topics:
               - (s.f.). Ejercicios de Interpolación.Doc.
             answer: 43
       - name: 'Lagrange'
-        content: ''
-        exercises: []
+        content: |
+          El método de Lagrange a diferencia de los otros métodos, se puede resolver utilizando intérvalos uniformes y no uniformes.
+
+          Para resolver este método es necesario utilizar la siguiente formula:
+
+          ![Formula Método Lagrange](/img/lagrange/formula.png)
+
+          y al igual que los metodos anteriores se debe conocer los valores de Xi e Yi
+        exercises:
+          - content: |
+              Obtener el polinomio de interpolación utilizando la fórmula de interpolación de Lagrange con la siguiente tabla de valores, e
+              interpolar en el punto x = 2.
+            answer: 0.5658
+          - content: |
+              Obtener g(x) para x = 7
+
+              |X|Y|
+              |-|-|
+              |7.3|-0.28|
+              |6.5|-1.35|
+              |6.5|-1.35|
+              |6.1|-1.69|
+            answer: 2.69285
+          - content: |
+              Obtener g(x) para x = 3.
+
+              |X|Y|
+              |-|-|
+              |0|5|
+              |1|7|
+              |2|9|
+              |5|15|
+            answer: 11
   - name: 'Solución de Ecuaciones no Lineales'
     methods:
       - name: 'Gráfico'
-        content: ''
-        exercises: []
+        content: |
+
+          Los pasos para resolver un sistema de ecuaciones por el método gráfico son los siguientes:
+
+          Despejamos la incógnita «y» en cada una de las ecuaciones
+          Representamos cada una de las rectas en los ejes de coordenadas
+          Las coordenadas del punto de corte de ambas rectas, será la solución del sistema de ecuaciones.
+        exercises:
+          - content: |
+              Suponga que se posee un presupuesto de US$10.000 y una disponibilidad de 1.200 días hombre durante el horizonte de planificación. Formule y resuelva gráficamente un modelo de Programación Lineal para este problema. Detalle claramente el dominio de soluciones factibles y el procedimiento utilizado para encontrar la solución óptima y valor óptimo.
+
+              Función Objetivo:
+
+              Maximizar 50X1+120X2
+              Restricciones:
+
+              X1+X2 =110
+              100X1+200X2=10.000
+              10X1+30X2=1.200
+              X1,X2= 0
+            answer: 5.4
       - name: 'Bisectriz'
-        content: ''
-        exercises: []
+        content: |
+          Este metodo es un tipo de búsqueda en el que el intervalo esta siempre dividido a la mitad. Dependiendo de la posición de la raiz situado en el punto medio del subintervalo dentro del cual ocurre un cambio de signo.
+
+          Con la formula:
+          $$
+          x = (a+b)/2
+          $$
+          Donde `a` es el valor positivo y `b` es el valor negativo.
+
+          Se realizan múltiples iteraciones hasta que el margén de error (E) sea igual o menor al establecido por el problema.
+          Se utiliza la siguiente formula:
+          $$
+          E = | a - b |
+          $$
+        exercises:
+          - content: |
+              Resolver:
+              $$
+              x^3 - 2x - 5
+              $$
+            answer: 2.094238282
       - name: 'Punto Fijo'
-        content: ''
-        exercises: []
+        content: |
+          Es un método iterativo
+          La idea principal es encontrar las raíces de
+          una ecuación al proponerlas como puntos
+          fijos de una formulación alternativa.
+
+          Primero se despeja la variable de la ecuacion.
+          Después se cálcula el valor de esta variable y se acumula como valor de Xi.
+          Posteriormente se obtiene el valor de E:
+          $$
+          E=|Xi+1-Xi|
+          $$
+          utilizando el valor anterior de Xi con el nuevo valor cálculado, se repite la iteracion hasta obtener un valor de error de 0.0000
+        exercises:
+          - content: |
+              Resolver:
+              $$
+              f(x)=x2-5x-ex
+              $$
+              Comenzando con
+              $$
+              x0=0
+              $$
+            answer: 0.164410064
+          - content: |
+              Resolver
+              $$
+              f(x)=cos x-x
+              $$
+
+              Comenzando con:
+              $$
+              x0=0
+              $$
+            answer: 0.7414250866
+          - content: |
+              Resolver:
+              $$
+              x-e-x=0
+              $$
+            answer: 0.567157044
       - name: 'Newton - Raphson'
-        content: ''
-        exercises: []
+        content: |
+          Es un algoritmo para encontrar aproximaciones de los ceros o raíces de una función real. También puede ser usado para encontrar el máximo o mínimo de una función, encontrando los ceros de su primera derivada.
+
+          Como primer paso se cálcula la ecuación a su mínima expresión.
+
+          Posteriormente, se obtiene el valor de las iteraciones utilizando la ecuación original entre la ecuación minimizada.
+
+          Para cślcular el valor de error, se utiliza la fórmula:
+          $$
+          E=|Xi+1-Xi|
+          $$
+          Con el valor obtenido de la iteración nueva menos el valor de la iteración anterior.
+
+
+          Ejemplo:
+
+          Aproximar la solución de:
+          $$
+          cos(x) - x = 0
+          $$
+
+          $$
+          f(x) = cos(x) - x, f0(x) = - sin (x) - 1 \newline
+          x0 = 0.78539 816, \newline
+          xj+1 = xj + cos (xj ) - xj/sin (xj )+1 \newline
+          $$
+
+          El valor de las iteraciones es:
+          $$
+          x1 = x0 + cos (x0) - x0 \newline
+          sin (x0)+1 = 0. 78539 816 - 0.04 58620 3 = 0. 73953 613, \newline
+          x2 = x1 + cos (x1) - x1/sin (x1)+1 = 0. 73908 518 \newline
+          x3 = x2 + cos (x2) - x2/sin (x2)+1 = 0. 73908 513, \newline
+          x4 = 0. 73908 513.
+          $$
+
+          Resultado:
+          $$
+          a = 0. 73908 513
+          $$
+        exercises:
+          - content: |
+              Resolver:
+              $$
+              x^3-2x-5=0
+              $$
+            answer: 2.09455
+          - content: |
+              Resolver:
+              $$
+              x^5-x-1=0
+              $$
+            answer: 1.16730398
+          - content: |
+              Resolver:
+              $$
+              e^x=4-x2
+              $$
+            answer: 1.0580
       - name: 'Falsa Posición'
-        content: ''
-        exercises: []
+        content: |
+          El método de la regula falsi (regla del falso) o falsa posición es un método iterativo de resolución numérica de ecuaciones no lineales.
+
+          Con el uso de la fórmula:
+          $$
+          x= a-f(a) (b-a)/f(b)-f(a)
+          $$
+        exercises:
+          - content: |
+              Resolver:
+              $$
+              f(x)= x-cos(x) -1<x<4
+              $$
+            answer: 0.7391
+          - content: |
+              Resolver:
+              $$
+              f(x)=e-x-lnx [1,2]
+              $$
+            answer: 1.311269556
+          - content: |
+              Resolver:
+              $$
+              f(x)=arctan x+x-1 [0,1]
+              $$
+            answer: 0.5204706484
+      - name: 'Secante'
+        content: |
+          En análisis numérico el método de la secante es un método para encontrar los ceros de una función de forma iterativa. El método de la secante se puede considerar como una aproximación en diferencias finitas del método de Newton-Raphson.
+
+          Utilice la siguiente fórmula:
+
+          Xi+1=Xi+1 {(f(Xi+1)(Xi+1-Xi)/f(Xi+1)-f(Xi)
+        exercises:
+          - content: |
+              Resolver:
+              $$
+              f(x)=e-x2-x
+              $$
+
+              Cuando:
+              - x0=0
+              - x1=1
+            answer: 1,-0.632120558
   - name: 'Solución de Ecuaciones Lineales'
     methods:
       - name: 'Montante'
-        content: ''
-        exercises: []
+        content: |
+          Es un algoritmo del álgebra lineal para determinar las soluciones de un sistema de ecuaciones lineales, encontrar matrices inversas, matrices de adjuntos y determinantes. El método consiste en ir “pivoteando” en la diagonal principal. Se comienza en el extremo superior izquierdo, el renglón donde esta el pivote va a ser el renglón base de todo el sistema y la columna donde esta el pivote va a ser la columna base. Con respecto a ese renglón y esa columna, donde está el pivote, se forman determinantes de dos por dos, y siempre se trabaja con números enteros, si apareciera alguna fracción hay un error.
+
+          Ejemplo :
+          Tenemos las siguientes ecuaciones:
+          3x – 2y +  z = 2
+          4x + 3y – 5z = 4
+          2x +  y –  z = 3
+
+          	|3 –2 +z | 2
+          	|4 +3 –z | 4
+          	|2 +1 –z | 3
+
+          Solución:
+          Los siguientes pivotes se irán obteniendo sobre la diagonal
+          principal de la matriz aumentada.
+
+          El primer pivote es el elemento 3.
+
+          Luego se debe hacer ceros en la columna del pivote (ceros arriba y debajo de él).
+
+          Mientras que la fila del pivote continua con los mismos valores.
+
+          Para conseguir los nuevos elementos de la matriz que hacen falta se aplica la siguiente
+          ecuación:
+
+          Se resuelve multiplicando el elemento por el pivote, menos el producto de los dos
+          elementos de la fila y la columna donde están el pivote y el elemento entre
+          el pivote anterior
+
+          Nuevo Elemento= (Pivote Actual)(Elemento Actual)-(Elemento Columna del Pivote)(Elemento Fila del Pivote)/Pivote anterior
+
+          NE(2,2)=((3)(3)-(-2)(4))/1=17
+          NE(2,3)=((3)(-5)-(1)(4))/1= -19
+          NE(2,4)= ((3)(4)-(2)(4))/1=4
+          NE(3,2)= ((3)(1)-(2)(2))/1=7
+          NE(3,3)= ((3)(-1)-(1)(2))/1=-5
+          NE(3,4)=((3)(3)-(2)(2))/1=5
+
+          	|3  –2    1| 2
+          	|0  17  –19| 4
+          	|0   7   –5| 3
+
+
+          El pivote anterior ahora será 3
+
+          El pivote actual cambiara a 17
+
+          Los elementos por encima y debajo del pivote actúal serán 0
+
+          Los nuevos elementos de la nueva matriz se conseguirán con la misma fórmula.
+
+          Por último el  pivote anterior que era 3 cambia a 17.
+
+          NE(1,3)=((17)(1)-(-2)(-19))/3=-7
+          NE(1,4)=((17)(2)-(-2)(4))/3=14
+          NE(3,3)=((17)(-5)-(7)(-19))/3=16
+          NE(3,4)=((17)(5)-(7)(4))/3=19
+
+          	|17  0    7| 14
+          	|0  17  –19|  4
+          	|0   0   16| 19
+
+          el pivote anterior ahora será 17
+
+          el pivote actual será 16
+
+          los elementos por encima del pivote serán 0
+
+          Los nuevos elementos de la nueva matriz se conseguirán con la misma fórmula.
+
+          Los pivotes anteriores que son 17 cambiaran al pivote actual 16.
+
+          NE(1,4)=((16)(14)-(-7)(19))/17=21
+          NE(2,4)= ((16)(4)-(-19)(19))/17=25
+
+          	|16  0    0| 21
+          	|0  16    0| 25
+          	|0   0   16| 19
+
+          Al terminar la matriz encontramos los valores de x,y, z, estos son los elementos que sobran entre el ultimo pivote:
+
+          X=21/16
+
+          Y=25/16
+
+          Z=19/16
+        exercises:
+          - content: |
+              $$
+              3a – b + 4 c = 2 \newline
+              -5a + 3b + 7c = 0 \newline
+              7a – 4b + 4c = 12
+              $$
+            answer: 4,2,-2
+          - content: |
+              $$
+              4x + 3y 2z = 5 \newline
+              1x –1y +1z = 3 \newline
+              2x + y + 2z =-2
+              $$
+            answer: 2.2,-2.2,-1
       - name: 'Gauss - Jordan'
-        content: ''
-        exercises: []
+        content: |
+          Los métodos de eliminación de Gauss y de Gauss-Jordan  permiten obtener las soluciones (en caso de haberlas) de los sistemas de ecuaciones lineales (SEL).
+
+          Ambos métodos se basan en la idea de que las soluciones del SEL que se obtiene al realizar operaciones elementales fila o columna son las mismas que las del SEL original.
+
+
+          Ejemplo
+
+          El sistema:
+
+          	5x + 2y = 3
+             -3x + 3y = 15
+
+            tiene la matriz ampliada:
+
+             |5 + 2| 3
+             |3 + 3| 15
+
+           El método consiste en aplicar operaciones elementales fila, es decir,
+           cualquier fila se puede multiplicar por cualquier número (distinto de cero)
+           o se le puede sumar o restar cualquier otra fila multiplicada o no por cualquier
+           número. No se puede restar una fila a ella misma. También puede intercambiarse el
+           orden de las filas (por ejemplo, intercambiar las dos primera filas).
+
+          El proceso debe aplicarse hasta que se obtenga la matriz en forma escalonada
+          (método de Gauss) o en forma escalonada reducida (método Gauss-Jordan) de la
+          matriz ampliada.
+
+          Recordamos que una matriz en su forma escalonada reducida cumple:
+
+          >En cada fila, el primer elemento distinto de cero (de izquierda a derecha) es un 1 (uno principal). A la izquierda de este 1, sólo hay ceros. A su derecha puede haber cualquier número. En la columna del 1 principal de las filas de arriba y las de abajo sólo puede haber ceros (a no ser que sea la primera fila y por encima del 1 no hay ningún elemento).
+
+          >El uno principal de cualquier fila se sitúa más a la izquierda de los unos principales de las filas inferiores a ésta.
+
+          >Si existen filas formadas únicamente por ceros, éstas son las inferiores.
+
+
+          Vamos a obtener la forma escalonada reducida de la matriz ampliada
+             |5 + 2| 3
+             |3 + 3| 15
+
+          Múltiplicamos la primera fila por 1/5 y la segunda por 1/3
+             |1   2/5 | 3/5
+             |-1    1 | 5
+
+          Sumamos a la segunda fila la primera
+             |1   2/5 | 3/5
+             |0   7/5 | 28/5
+
+          ﻿Múltiplicamos la segunda fila por 5/7
+             |1   2/5 | 3/5
+             |0     1 | 4
+
+          Sumamos a la primera fila la segunda fila múltiplicada por -2/5
+             |1     0 | -1
+             |0     1 |  4
+
+          Ahora escribimos el sistema que representa esta última matriz:
+          	x = -1
+              y =  4
+        exercises:
+          - content: |
+              $$
+              5x + 2y = 2 \newline
+              2x + y - z = 0 \newline
+              2x + 3y - z = 3
+              $$
+            answer: -1/5,3/2,11,10
+          - content: |
+              $$
+              3a – 2b + 2c = 1 \newline
+              4a + 2b + 2c = 2 \newline
+              3a – 3b + 3c = 3
+              $$
+            answer: -1,0.5,2.5
       - name: 'Eliminación Gaussiana'
-        content: ''
-        exercises: []
+        content: |
+          Algoritmo de Gauss o Eliminacion Gaussiana (Gaussian
+          Elimination) es un método numérico que se utiliza para reducir
+          una matriz. Es decir, para llevar la matriz a la forma
+          escalonada reducida por renglones. Hay otros métodos como
+          Gauss-Jordan o Montante. El método consta de dos fases:
+          1 La primera cuyo fin es escalonar la matriz: esto lo hace de
+          izquierda a derecha y de arriba hacia abajo, y
+          2 La segunda donde reduce: esto lo hace de abajo hacia
+          arriba y de derecha a izquierda.
+          En su aplicación sólo requiere operaciones elementales de
+          renglón. El uso de eliminaci´on Gaussiana no sólo se limita a
+          resolver sistemas de ecuaciones lineales sino también se puede
+          aplicar al cálculo de inversas de matrices o a la comparación de
+          espacios generados. Es decir, es un método genérico y por lo
+          tanto, no debe suponer que la matriz es una matriz aumentada
+          de un sistema. Hasta el momento, es el método que requiere
+          menos operaciones aritméticas cuando se aplica a una matriz
+          general.
+
+
+          	Pasos del algoritmo de Eliminación Gaussiana:
+          I. Fase de Escalonamiento:
+          1. Determine la primer columna (a la izquierda) no cero.
+          2. Si el primer elemento de la columna es cero, intercambie el
+          renglón por un renglón inferior que no tenga cero en esa
+          posición.
+          3. Por eliminación, obtenga ceros abajo del elemento
+          delantero (pivote) en los renglones debajo de él.
+          4. Cubra el renglón y la columna de trabajo y repita el
+          proceso comenzando en el paso 1.
+          II. Fase de Reducción:
+          5. Comenzando con el último renglón no cero avance hacia
+          arriba escalando el renglón para obtener un 1 delantero
+          (pivote) y haga ceros arriba de él utilizando eliminación.
+
+          Aplique el algoritmo de Gauss a la matriz:
+          		| 3  6 −9 |  3
+          		| 2  4 −8 |  0
+          		|−2 −3  4 | −1
+
+
+          		Fase I: Escalonamiento
+
+          		| 3  6 −9 |  3  R2←R2 −(2/3) R1   |3  6  −9  |  3
+          		| 2  4 −8 |  0  −−−−−−−−−−−−→     |0  0  −2  | −2
+          		|−2 −3  4 | −1  R3←R3 −(−2/3) R1  |0  1  −2  |  1
+
+
+                  | 3  6 −9 |  3               |3  6  −9| 3
+                  | 0  0 −2 | −2  	 R2↔R3   |0  1  −2| 1
+                  | 0  1 −2 |  1     −−−−→     |0  0  −2| −2
+
+
+          Fase II: Reducción
+
+
+          		|3  6 −9|  3                   |3  6 −9| 3
+          		|0  1 −2|  1   R3←1/(−2) R3    |0  1 −2| 1
+          		|0  0 −2| −2   −−−−−−−−−→      |0  0  1| 1
+
+
+                  |3  6 −9| 3   R1←R1 −(−9) R3   |3  6  0| 12
+                  |0  1 −2| 1   −−−−−−−−−−→      |0  1  0|  3
+                  |0  0  1| 1   R2←R2 −(−2) R3   |0  0  1|  1
+
+
+          		|3  6  0| 12                   |3  0  0| −6
+          		|0  1  0| 3		R1←R1 −6 R2    |0  1  0|  3
+          		|0  0  1| 1       −−−−−−−−→    |0  0  1|  1
+
+
+          		|3  0  0| −6                   |1  0  0| −2
+          		|0  1  0|  3    R1←1/3 R1      |0  1  0|  3
+          		|0  0  1|  1    −−−−−−−→       |0  0  1|  1
+
+          Solución:
+          	x = -2
+              y =  3
+          	z =  1
+        exercises:
+          - content: |
+              $$
+              2x1 – x2 + 3x3c = -1 \newline
+              -x1 + 3x2 + 2x3 = 12 \newline
+              3x1 – x2 + 3x3 = 0
+              $$
+            answer: 1,3,2
       - name: 'Gauss - Seidel'
-        content: ''
-        exercises: []
+        content: |
+          El método de Gauss-Seidel es el mas comúnmente usado para resolver sistemas muy grandes de ecuaciones líneales.
+
+          Es una modificación del método de Jácobi que hace que la convergencia sea mas rápida.
+
+          Comienza con una aproximación inicial x(0) a la solución x y genera una sucesión de vectores x(k) que convergen a la solución x.
+
+          Un sistema de ecuaciones algébraicas lineales es un conjunto de ecuaciones de la forma:
+
+
+          			a11 X1 + a12 X2 + a13 X3 + ... + a1n Xn = b1
+          			a21 X1 + a22 X2 + a23 X3 + ... + a2n Xn = b2
+          		    a31 X1 + a32 X2 + a33 X3 + ... + a3n Xn = b3
+
+          	        an1 X1 + an2 X2 + an3 X3 + ... + ann Xn = bn
+
+
+          			O bien en su forma matricial:
+
+
+          			a11 a12 a13 ... a1n Xn b1
+          			a21 a22 a23 ... a2n Xn b2
+          			a31 a32 a33 ... a3n Xn b3
+
+          			an1 an2 an3 ... ann Xn bn
+
+          Que a su vez se puede expresar como:
+
+                                  Ax = b
+
+          Donde “A” es la matriz de coeficientes, x es el vector de incógnitas y b el vector de términos independientes.
+
+          La solución del sistema de ecuaciones es un conjunto de n valores X1,X2,X3,...Xn que satisfacen simultáneamente todas las ecuaciones.
+
+          Tanto en el método de Gauss-Seidel como en el de Jácobi, el valor  que se le de al vector inicial carece de importancia, ya que el método convergirá a la solución rápidamente no obstante que el vector inicial tenga valores muy lejanos a la solución. Es por esto que se acostumbra a dar el vector 0 como vector inicial.
+
+          En la solución de estos problemas pueden presentarse 3 casos:
+
+          1.- Solución única          −−−→           Sistema compatible determinado.
+
+          2.- Mas de una solución     −−−→           Sistema compatible e indeterminado.
+
+          3.- Sin solución            −−−→           Sistema incompatible.
+        exercises:
+          - content: |
+              $$
+              0.1 X1 + 7.0 X2 - 0.3 X3 = -19.30 \newline
+              3.0 X1 - 0.1 X2 - 0.2 X3 = 7.85 \newline
+              0.3 X1 - 0.2 X2 - 10.0 X3 = 71.40
+              $$
+            answer: 3,-2.5,7.0
+          - content: |
+              $$
+              3a – 0.1b - 0.2c = 7.85 \newline
+              0.1a + 7b – 0.3c = -19.3 \newline
+              0.3a – 0.2b + 10c = 71.4
+              $$
+            answer: 1.35078,1.29829,1.50881
       - name: 'Jacobi'
-        content: ''
-        exercises: []
+        content: |
+          Este método parte de una aproximación inicial, a partir de esta recálcula los valores
+          de x al despejarla de una ecuación, este proceso se realiza para las n incógnitas x y
+          cada calculo se realiza con los valores de la aproximación anterior.
+
+          Matricialmente se define el problema de la siguiente manera
+
+          X(k+1)=Tj Xk+Cj
+
+          Donde:
+
+           Tj = D-1(L+U)
+
+          Cj=D-1b
+
+          D: matriz diagonal con los elementos de A
+
+          L: inversos aditivos de los elementos por debajo de la diagonal principal de A
+
+          U: inversos aditivos de los elementos por encima de la diagonal principal de A
+
+          El método se itera hasta que || X(k+1)- Xk||<tolerancia
+
+          Este método puede usarse sin inconvenientes en matrices diagonal dominante
+          estrictamente, o en matrices definidas positivas.
+          Otra forma de comprobar si el método converge es ver si el radio espectral de Tj
+          es menor que 1, de ser así converge para cualquier aproximación inicial.
+        exercises:
+          - content: |
+              $$
+              x –  3y - 5z = 5 \newline
+              8x – y  – z = 8 \newline
+              -2y + 4y + z = 4
+              $$
+            answer: 3.00001,-2.5000,6.99998
       - name: 'Raíces de Polinomios'
-        content: ''
-        exercises: []
+        content: |
+          Recuerda que un polinomio es una ecuación que contiene más de tres términos.
+
+          Las raíces de un polinomio es un número tal que hace que el polinomio sea igual a cero.
+
+          Estas raíces se pueden obtener por:
+
+          *División sintética.
+          *Fórmula Géneral
+          *Factorización
+
+          Ejemplo por factorización.
+
+          Se tiene x2+x+6=0
+
+          Se obtiene:
+          (x+3)(x-2)=0
+
+          Entonces las raíces son:
+
+          x=-3
+          x=2
+        exercises:
+          - content: |
+              Resolver mediante factorización:
+              $$
+              x^2 + 4x - 21
+              $$
+            answer: -7,3
   - name: 'Mínimos Cuadrados'
     methods:
       - name: 'Línea Recta'
-        content: ''
-        exercises: []
-      - name: 'Cuadrática'
-        content: ''
-        exercises: []
-      - name: 'Cúbica'
-        content: ''
-        exercises: []
+        content: |
+          Se tiene la ecuacion:
+
+          g(x) = a0+a1x
+
+          En donde a0 y a1x representan coeficientes de la intersección de la pendiente y el eje de x.
+
+          n = número de valores correspondientes a x.
+
+          ![Formula Línea Recta](/img/linea-recta/formula.png)
+        exercises:
+          - content: |
+              Resolver:
+
+              |X|Y|
+              |-|-|
+              |1.1|2.5|
+              |1.9|2.7|
+              |2.4|3.7|
+              |4.8|5.2|
+              |5.1|6.0|
+              |10.5|8.3|
+
+              ¿Cuál es el valor de `g(x)` para `x1`?
+            answer: 2.705508427
       - name: 'Lineal con Función'
-        content: ''
-        exercises: []
+        content: |
+          Ecuación:
+
+          g(x)= a0 + a1x + a2(funcion (x))
+
+          Funciones de x:
+          $$
+          e^x \newline
+          sen (x) \newline
+          cos(x) \newline
+          tg(x) \newline
+          Ln(x)
+          $$
+        exercises:
+          - content: |
+              ¿En qué modo debe estar los cálculos matemáticos para poder resolver un método con funciones trigonométricas?
+                  1. Radianes
+                  2. Decimales
+                  3. Grados
+            answer: 1
       - name: 'Cuadrática con Función'
-        content: ''
-        exercises: []
+        content: |
+          Ecuación:
+          $$
+          g(x)= a0 + a1x + a2x2 + a3 (funcion (x))
+          $$
+          Funciones de x:
+          $$
+          e^x \newline
+          sen (x) \newline
+          cos (x) \newline
+          tg (x) \newline
+          Ln (x)
+          $$
+        exercises:
+          - content: |
+              ¿Cuál de las siguientes NO es una función trigonométrica?
+                  1. Seno
+                  2. Tangente
+                  3. Logaritmo Natural
+            answer: 3
   - name: 'Integración'
     methods:
       - name: 'Regla Trapezoidal'
-        content: ''
-        exercises: []
+        content: |
+          En análisis numérico la regla del trapecio es un método de integración, es decir, un método para cálcular aproximadamente el valor de una integral definida.
+
+          ![Formula Regla Trapezoidal](/img/regla-trapezoidal/formula.png)
+        exercises:
+          - content: |
+              Cálcular la integral de:
+              $$
+              f(x)=x3-6x2+11x-6
+              $$
+              En el intérvalo [1.3, 1.8].
+            answer: 0.13725
+          - content: |
+              Cálcular la integral de:
+              $$
+              f(x)=x3-6x2+11x-6
+              $$
+              En el intérvalo [1.3, 1.8].
+            answer: 0.16459375
+          - content: |
+              Cálcular la integral de:
+              $$
+              f(x)=ex2
+              $$
+              En el intérvalo [0, 1].
+            answer: 1.46717469
       - name: 'Newton - Cotes Cerradas'
-        content: ''
-        exercises: []
+        content: |
+          Recibe este nombre debido a que el dominio de integración esta cerrado por el primer y último dato.
+
+          h= b-a/n
+
+          ![Formula Newton Cotes Cerradas](/img/newton-cotes-cerradas/formula.png)
+        exercises:
+          - content: |
+              $$
+              \int_0^1 (1-x^2)dx \newline
+              N = 6
+              $$
+            answer: 0.666666
       - name: 'Newton - Cotes Abiertas'
-        content: ''
-        exercises: []
-      - name: 'Tablas Constantes'
-        content: ''
-        exercises: []
+        content: |
+          Reciben este nombre al extender la integración hasta un intérvalo a la izquierda del primer dato y un intérvalo a la derecha del último dato.
+
+          h= b-a/n+2
+
+          ![Formula Newton Cotes Abiertas](/img/newton-cotes-abiertas/formula.png)
+        exercises:
+          - content: |
+              $$
+              \int_-2^2 (3x^3 - 10) dx \newline
+              N = 4
+              $$
+            answer: -40
       - name: 'Regla de 1/3 de Simpson'
-        content: ''
-        exercises: []
+        content: |
+          El método de Integración Simpson 1/3 consiste en tomar el área bajo una parábola que conecta tres puntos
+
+          ![Formula Regla de 1/3 de Simpson](/img/simpson-1-3/formula.png)
+        exercises:
+          - content: |
+              $$
+              \int_0^1 3x\sqrt{x^2 + 1} dx \newline
+              N = 4
+              $$
+            answer: 1.82842
       - name: 'Regla de 3/8 de Simpson'
-        content: ''
-        exercises: []
+        content: |
+          El método de Integración Simpson 3/8 consiste en tomar el área bajo una ecuación cúbica que conecta cuatro puntos
+
+          ![Regla de 3/8 de Simpson](/img/simpson-3-8/formula.png)
+        exercises:
+          - content: |
+              $$
+              \int_0^1 [(x^3)(e^x)] dx \newline
+              N = 4
+              $$
+            answer: 10.57558
+  - name: 'Ecuaciones Diferenciales Ordinarias'
+    methods:
+      - name: 'Euler Hacia Adelante'
+        content: |
+          Con la primera derivada se obtiene en forma directa la estimación de una pendiente,
+          Es decir, divide el intervalo de x = 0 en n subintérvalos de ancho h.
+          Ecuación:
+
+          Yn+1 = Yn + hF(yn,tn)
+
+          T = 0, siempre es 0 pues parte del origen.
+          Este se obtiene por diferencias hacia adelante y así reescribiéndolo la aproximación.
+          Se calcula Yn+1 en forma recursiva.
+
+        exercises:
+          - content: |
+              Resolver:
+              $$
+              3y’ – 5y + 1 = 0
+              $$
+              - Yo = 2
+              - h = 0.2
+            answer: 1.93333,1.99555
+      - name: 'Euler Hacia Atrás'
+        content: |
+          Se basa en la aproximación de diferencias hacia atrás, es tan preciso como el Euler hacia adelante.
+
+          Tiene como ventaja que es estable para problemas rígidos y proporciona una solución positiva si también esta anterior es exacta
+
+          El intervalo lo divide n subintérvalos de ancho h.
+
+          Ecuación
+
+          Yn+1 = Yn + hF(Yn+1,tn+1)
+
+          T=0 siempre es 0 pues parte del origen.
+
+          Este se obtiene por diferencias hacia atrás y así rescribiéndolo la aproximación.
+          Se calcula Yn+1 en forma recursiva.
+
+        exercises:
+          - content: |
+              ¿Cuánto valdrá el tiempo t en las operaciones de Euler hacia atrás?
+                  1. T = 0
+                  2. T = 0.58
+                  3. T = 3
+            answer: 1
+          - content: |
+              Resolver:
+              $$
+              3y’ – 5yt +1 = 0
+              $$
+
+              Cuando:
+              - y0 = 2
+              - h = 0.2
+            answer: 1.9333333
+      - name: 'Euler Modificado'
+        content: |
+          Es mas exacto que el método Euler hacia adelante, su estabilidad es excelente, se obtiene aplicando la regla trapezoidal para integrar.
+
+          Formula:
+          Yn+1 = Yn + h/2( f(Yn,Tn) + f(Yn+1,Tn+1) )
+
+        exercises:
+          - content: |
+              Resolver:
+              $$
+              y' + y/2 = sen(t)
+              $$
+              - Yo = 1
+              - Y1 = 1
+              - h = 0.5
+            answer: 0.869856384,1.096492083
+      - name: 'Runge - Kutta de 2° Orden'
+        content: |
+          En este método se utilizan las siguientes fórmulas para la iteración:
+
+          K1= h f(Yn, tn)
+          K2= h f(Yn+K1, tn + h)
+          Yn+1= Yn + 1/2(K1 + K2)
+
+          donde K es una evolución funcional de los métodos de Runge-Kutta.
+        exercises:
+          - content: |
+              Resolver:
+              $$
+              y´ - 2ty + 1 = 0
+              $$
+              - Yo = 1
+              - h = 0.6
+            answer: 0.544,0.38152
+      - name: 'Runge - Kutta de 3° Orden'
+        content: |
+          Los métodos de Runge kutta tienen el error local de truncamiento del mismo orden que los métodos de Taylor, pero prescinden del cálculo y evaluación de las derivadas de la función f(t, y).
+
+          Fórmulas que se utilizan:
+
+          k1 = h f(Yn, tn)
+          K2= h f(Yn+ K1/2, tn + h/2)
+          k3= h f(Yn- K1+ 2K2, tn+ h)
+          Yn+1= Yn + 1/6(K1}4K2+K3)
+        exercises:
+          - content: |
+              Resolver:
+              $$
+              y' = (2ty + 1)/(y^2)
+              $$
+              - Yo = 1
+              - h = 0.25
+            answer: 1.211723276
+      - name: 'Runge - Kutta de 4° Orden - 1/3 de Simpson'
+        content: |
+          Es la forma de los métodos de Runge-Kutta de uso más común y así mismo más exáctos para obtener soluciones aproximadas de ecuaciones diferenciales. La solución que ofrece este método, es una tabla de la función solución, con valores de "y" correspondientes a valores específicos de "x".
+
+          El método utiliza las siguientes fórmulas para obtener el valor de Y1.
+
+          K1= h f(Yn+1,tn)
+          K2= h f(Yn+ K 1/3,tn + h/3)
+          k3= h f(Yn+ K 1/3 + K 2/3,tn + 2/3h)
+          K4= h f(Yn+ K 1-K2-K3,tn + h)
+          Yn+1= Yn + 1/8(K1 + 3K2 + 3K3 + K4)
+        exercises:
+          - content: |
+              Resolver:
+              $$
+              y' = (y + t)^2/(1 - y)
+              $$
+              - Yo = 0.4
+              - h = 0.2
+            answer: 10.511617621
+      - name: 'Runge - Kutta de 4° Orden - 3/8 de Simpson'
+        content: |
+          El método de Integración Simpson 3/8 consiste en tomar el área bajo una ecuación cúbica que conecta cuatro puntos
+
+          ![Regla de 3/8 de Simpson](/img/simpson-3-8/formula.png)
+        exercises:
+          - content: |
+              Resolver:
+              $$
+              y' = y/ (y^2 + t)
+              $$
+              - Yo = 1
+              - h = 0.5
+            answer: 0.552579997
+      - name: 'Runge - Kutta de Orden Superior'
+        content: |
+          Una ecuación diferencial ordinaria de orden superior es una expresión que relaciona una
+          variable dependiente: y sus derivadas de cualquier orden con respecto a una variable independiente x.
+
+          El método utiliza las siguientes formulas:
+
+          K1= h Vo
+          m1= h (+- a Vn +- b Unn, qn)
+          K2= h (Vn + m1)
+          m2= h (+- a (Vn + m1)+-b(Un + K1), q0+ h)
+          Yn+1= Yn + 1/2 /K1 + K2)
+          Y'n= Y'n + 1/2/m1 + m2)
+        exercises:
+          - content: |
+              Resolver:
+              $$
+              y'' = (0.5y)/(1+t) + y'
+              $$
+            answer: 2.65964881

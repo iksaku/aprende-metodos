@@ -16,7 +16,7 @@
             <ul class="w-full pl-4">
                 @foreach($topic->methods as $method)
                     <li class="list-disc mb-1 last:mb-0">
-                        <a href="{{ route('method', compact('method')) }}" class="hover:text-blue-700 focus:text-blue-700">
+                        <a href="{{ strlen($method->content) < 1 ? '#' : route('method', compact('method')) }}" class="hover:text-blue-700 focus:text-blue-700">
                             {{ $method->name }}
                         </a>
                     </li>

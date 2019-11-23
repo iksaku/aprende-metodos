@@ -40,6 +40,7 @@
                     autocomplete="off"
                     type="text"
                     name="answer"
+                    value="{{ old('answer') }}"
                     class="form-input w-full block @error('answer') border-red-500 @enderror"
                 >
                 @error('answer')

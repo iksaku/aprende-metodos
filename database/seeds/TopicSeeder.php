@@ -8,17 +8,12 @@ use Symfony\Component\Yaml\Yaml;
 
 class TopicSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
     public function run()
     {
         $data = Yaml::parseFile(database_path('/seeds/data.yml'));
 
         foreach ($data['topics'] as $topicData) {
-            $topic = Topic::firstOrCreate(['name' => $topicData['name']]);
+            $topic = Topic::updateOrCreate(['name' => $topicData['name']]);
 
             foreach ($topicData['methods'] as $methodData) {
                 /** @var Method $method */

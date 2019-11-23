@@ -36,11 +36,6 @@ class Exercise extends Model
         'content', 'answer',
     ];
 
-    /** @var array */
-    protected $casts = [
-        'answer' => 'float'
-    ];
-
     /**
      * @return BelongsTo
      */
