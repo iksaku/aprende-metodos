@@ -6,7 +6,7 @@
 @include('app.components.use-katex')
 
 @section('content')
-    <div id="notice" class="h-full w-full rich-text flex flex-col items-center justify-center hidden">
+    <div id="notice" class="h-full w-full.markdown flex flex-col items-center justify-center hidden">
         <h2>
             Tu tiempo se ha agotado
         </h2>
@@ -15,7 +15,7 @@
     </div>
 
     <div id="content" class="w-full">
-        <div class="w-full rich-text mb-8">
+        <div class="w-full.markdown mb-8">
             <p>
                 Tiempo restante: <span id="time"></span>
             </p>

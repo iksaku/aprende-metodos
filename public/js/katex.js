@@ -17815,9 +17815,9 @@ document.addEventListener('DOMContentLoaded', function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/iksaku/Documents/UANL/Courses/MetodosNumericos/aprende_metodos/resources/js/katex.js */"./resources/js/katex.js");
-__webpack_require__(/*! /home/iksaku/Documents/UANL/Courses/MetodosNumericos/aprende_metodos/resources/styles/katex.pcss */"./resources/styles/katex.pcss");
-module.exports = __webpack_require__(/*! /home/iksaku/Documents/UANL/Courses/MetodosNumericos/aprende_metodos/resources/styles/app.pcss */"./resources/styles/app.pcss");
+__webpack_require__(/*! /home/iksaku/Documents/UANL/Courses/Metodos Numericos/aprende_metodos/resources/js/katex.js */"./resources/js/katex.js");
+__webpack_require__(/*! /home/iksaku/Documents/UANL/Courses/Metodos Numericos/aprende_metodos/resources/styles/katex.pcss */"./resources/styles/katex.pcss");
+module.exports = __webpack_require__(/*! /home/iksaku/Documents/UANL/Courses/Metodos Numericos/aprende_metodos/resources/styles/app.pcss */"./resources/styles/app.pcss");
 
 
 /***/ })

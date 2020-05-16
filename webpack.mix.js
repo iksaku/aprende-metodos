@@ -13,8 +13,9 @@ require('laravel-mix-purgecss');
  */
 
 mix
-    .js('resources/js/katex.js', 'public/js')
     .postCss('resources/styles/katex.pcss', 'public/css')
+    .js('resources/js/katex.js', 'public/js')
+
     .postCss('resources/styles/app.pcss', 'public/css', [
         require('tailwindcss'),
         require('postcss-nested'),
@@ -22,5 +23,6 @@ mix
     ]);
 
 if (mix.inProduction()) {
-    mix.purgeCss().version();
+    mix
+        .version();
 }

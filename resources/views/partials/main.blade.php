@@ -7,17 +7,17 @@
 
         <title>{{ config('app.name') }}</title>
 
-        @livewireAssets
-
+        <livewire:styles />
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         @stack('styles')
     </head>
 
     <body class="bg-gray-200 overflow-hidden">
-        <div class="min-h-screen h-screen w-full">
+        <div class="min-h-screen h-full w-full">
             @yield('body')
         </div>
 
+        <livewire:scripts />
         @stack('scripts')
     </body>
 </html>

@@ -16,7 +16,7 @@
             </div>
         @endif
 
-        <div class="w-full rich-text">
+        <div class="w-full.markdown">
             <h1>
                 {{ $method->name }}
             </h1>
