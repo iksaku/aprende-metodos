@@ -2,6 +2,8 @@
 
 namespace App;
 
+use Eloquent;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\Pivot;
 
 /**
@@ -11,15 +13,15 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
  * @property int $user_id
  * @property int $attempt
  * @property bool $completed
- * @method static \Illuminate\Database\Eloquent\Builder|\App\MethodUser isCompleted()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\MethodUser newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\MethodUser newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\MethodUser query()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\MethodUser whereAttempt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\MethodUser whereCompleted($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\MethodUser whereMethodId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\MethodUser whereUserId($value)
- * @mixin \Eloquent
+ * @method static Builder|MethodUser isCompleted()
+ * @method static Builder|MethodUser newModelQuery()
+ * @method static Builder|MethodUser newQuery()
+ * @method static Builder|MethodUser query()
+ * @method static Builder|MethodUser whereAttempt($value)
+ * @method static Builder|MethodUser whereCompleted($value)
+ * @method static Builder|MethodUser whereMethodId($value)
+ * @method static Builder|MethodUser whereUserId($value)
+ * @mixin Eloquent
  */
 class MethodUser extends Pivot
 {

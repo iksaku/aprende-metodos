@@ -4,7 +4,7 @@ namespace App\Http\Livewire;
 
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
-use Livewire\Concerns\PerformsRedirects;
+use Livewire\ComponentConcerns\PerformsRedirects;
 
 class Logout extends Component
 {

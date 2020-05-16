@@ -1,5 +1,7 @@
 {
-    "/js/katex.js": "/js/katex.js",
+    "/js/alpine.js": "/js/alpine.js",
     "/css/katex.css": "/css/katex.css",
-    "/css/app.css": "/css/app.css"
+    "/css/app.css": "/css/app.css",
+    "/js/fontawesome.js": "/js/fontawesome.js",
+    "/js/katex.js": "/js/katex.js"
 }

@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,15 +13,16 @@
 |
 */
 
-Auth::routes([
-    'register' => true,
-    'reset' => false,
-    'confirm' => false,
-    'verify' => false,
-]);
+Route::middleware('guest')->group(function () {
+    Route::view('login', 'auth.login')->name('login');
+    Route::view('register', 'auth.register')->name('register');
+});
 
 Route::middleware('auth')->group(function () {
-    Route::get('/', 'IndexController@index')->name('index');
+    Route::get('/', 'IndexController')->name('index');
+
+    Route::post('logout', 'Auth\LogoutController')->name('logout');
+    Route::view('password/confirm', 'auth.passwords.confirm')->name('password.confirm');
 
     Route::prefix('method')->group(function () {
         Route::get('{method}', 'MethodController@showMethod')->name('method');

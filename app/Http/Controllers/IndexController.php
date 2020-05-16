@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 
 class IndexController extends Controller
 {
-    public function index()
+    public function __invoke()
     {
         $user = Auth::user();
         $completedMethods = $user->methods()->wherePivot('completed', true)->count();

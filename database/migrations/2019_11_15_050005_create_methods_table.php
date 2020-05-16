@@ -14,16 +14,14 @@ class CreateMethodsTable extends Migration
     public function up()
     {
         Schema::create('methods', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedBigInteger('topic_id');
+            $table->id();
+            $table->foreignId('topic_id')
+                ->constrained()
+                ->cascadeOnDelete();
+
             $table->string('slug')->unique();
             $table->string('name');
             $table->longText('content');
-
-            $table->foreign('topic_id')
-                ->references('id')
-                ->on('topics')
-                ->onDelete('cascade');
         });
     }
 

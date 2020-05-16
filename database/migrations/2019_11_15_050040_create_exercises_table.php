@@ -14,15 +14,13 @@ class CreateExercisesTable extends Migration
     public function up()
     {
         Schema::create('exercises', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedBigInteger('method_id');
+            $table->id();
+            $table->foreignId('method_id')
+                ->constrained()
+                ->cascadeOnDelete();
+
             $table->longText('content');
             $table->string('answer');
-
-            $table->foreign('method_id')
-                ->references('id')
-                ->on('methods')
-                ->onDelete('cascade');
         });
     }
 

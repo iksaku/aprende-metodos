@@ -1,7 +1,7 @@
-@extends('app.partials.template')
+@extends('layouts.app')
 
 @section('content')
-    <div class="h-full w-full">
+    <div>
         <p>
             Has completado {{ $completedMethods }}/{{ $totalMethods }} métodos disponibles.
         </p>

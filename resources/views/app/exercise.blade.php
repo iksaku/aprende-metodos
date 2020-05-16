@@ -1,12 +1,12 @@
 <?php /** @var App\Method $method */ ?>
 <?php /** @var App\Exercise $exercise */ ?>
 
-@extends('app.partials.template', ['showSidebar' => false])
+@extends('layouts.app', ['showSidebar' => false])
 
-@include('app.components.use-katex')
+<x-use.katex />
 
 @section('content')
-    <div id="notice" class="h-full w-full.markdown flex flex-col items-center justify-center hidden">
+    <div id="notice" class="h-full w-full markdown flex flex-col items-center justify-center hidden">
         <h2>
             Tu tiempo se ha agotado
         </h2>
@@ -15,7 +15,7 @@
     </div>
 
     <div id="content" class="w-full">
-        <div class="w-full.markdown mb-8">
+        <div class="w-full markdown">
             <p>
                 Tiempo restante: <span id="time"></span>
             </p>
@@ -24,7 +24,7 @@
                 {{ $method->name }} - Ejercicio
             </h1>
 
-            @parsedown($exercise->content)
+            @markdown($exercise->content)
         </div>
 
         <form method="post" action="{{ route('method.exercise', $method) }}" class="w-full block text-center">

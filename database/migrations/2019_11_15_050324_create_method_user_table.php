@@ -14,20 +14,15 @@ class CreateMethodUserTable extends Migration
     public function up()
     {
         Schema::create('method_user', function (Blueprint $table) {
-            $table->unsignedBigInteger('method_id');
-            $table->unsignedBigInteger('user_id');
+            $table->foreignId('method_id')
+                ->constrained()
+                ->cascadeOnDelete();
+            $table->foreignId('user_id')
+                ->constrained()
+                ->cascadeOnDelete();
+
             $table->integer('attempt')->default(0);
             $table->boolean('completed')->default(false);
-
-            $table->foreign('method_id')
-                ->references('id')
-                ->on('methods')
-                ->onDelete('cascade');
-
-            $table->foreign('user_id')
-                ->references('id')
-                ->on('users')
-                ->onDelete('cascade');
         });
     }
 
@@ -38,6 +33,6 @@ class CreateMethodUserTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_method');
+        Schema::dropIfExists('method_user');
     }
 }

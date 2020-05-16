@@ -197,7 +197,7 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 # Custom Ignores
-!/public/css/
-!/public/fonts/
-!/public/js/
-!/public/vendor/
+/public/css/
+/public/fonts/
+/public/js/
+/public/vendor/

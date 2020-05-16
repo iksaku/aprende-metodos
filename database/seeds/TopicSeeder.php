@@ -10,10 +10,12 @@ class TopicSeeder extends Seeder
 {
     public function run()
     {
+        Topic::truncate();
+
         $data = Yaml::parseFile(database_path('/seeds/data.yml'));
 
         foreach ($data['topics'] as $topicData) {
-            $topic = Topic::updateOrCreate(['name' => $topicData['name']]);
+            $topic = Topic::create(['name' => $topicData['name']]);
 
             foreach ($topicData['methods'] as $methodData) {
                 /** @var Method $method */

@@ -11,12 +11,12 @@ topics:
           $$
           f(b)-f(a)/b-a
           $$
-          El cuál presenta una aproximación con una diferencia divida a la primer derivada, esto quiere decir que si el intérvalo es menor entre los datos que se tengan, la paroximación que se obtenga será mejor.
+          El cual presenta una aproximación con una diferencia divida a la primer derivada, esto quiere decir que si el intérvalo es menor entre los datos que se tengan, la paroximación que se obtenga será mejor.
 
 
           ### ¿Como resolver un ejercicio de interpolación lineal?
 
-          1. Como primer paso define el valor que tendrá x.
+          1. Como primer paso define el valor que tendrá `x`.
           $$
           x=7
           $$
@@ -27,7 +27,7 @@ topics:
           Ln 2= 0.69314718
           $$
 
-          3. Tome como valor de a el primer valor de Ln (sin cálcular) y como valor de b el segundo valor de Ln (sin cálcular).
+          3. Tome como valor de a el primer valor de Ln (sin cálcular) y como valor de `b` el segundo valor de Ln (sin cálcular).
           $$
           a=6 \newline
           b=2
@@ -104,7 +104,7 @@ topics:
           Los intérvalos si son uniformes.
 
 
-          Con los respectivos valores de X y Y, obtenga el valor de ∆'f(Xi):
+          Con los respectivos valores de `X` y `Y`, obtenga el valor de ∆'f(Xi):
           $$
           ∆'1= Y2 - Y1= 1.32 - 1.43= - 0.11 \newline
           ∆'2= Y3 - Y2= 2.54 - 1.32=   1.22
@@ -146,7 +146,7 @@ topics:
               x= 2.3
               $$
 
-              Considere los siguientes valores de X y Y
+              Considere los siguientes valores de `X` y `Y`
 
               |    | Xi  | Yi  |
               |----|-----|------|
@@ -180,7 +180,7 @@ topics:
               | X2 | 2.9 | 2.24 |
               | X3 | 3.5 | 3.12 |
             answer: 3.615
-      - name: 'Newton hacia Atras'
+      - name: 'Newton hacia Atrás'
         content: |
           El método de Newton hacia atrás requiere de intérvalos uniformes al igual que el método de Newton hacia adelante.
 
@@ -205,7 +205,7 @@ topics:
           Los intérvalos si son uniformes
 
 
-          Una vez calculado el valor de h y después de determinar si son valores uniformes o no uniformes, calcule el valor de S, con su respectiva formula:
+          Una vez calculado el valor de `h` y después de determinar si son valores uniformes o no uniformes, calcule el valor de S, con su respectiva formula:
           $$
           S= X - Xi/h \newline
           S= 1.5 - 1.0/ 0.3 \newline
@@ -214,7 +214,7 @@ topics:
 
           Recuerda que (SO)=1 y (S1)= S
 
-          Con los respectivos valores de X y Y, obtenga el valor de Δ'f(Xi):
+          Con los respectivos valores de `X` y `Y`, obtenga el valor de Δ'f(Xi):
           $$
           Δ'1= Y2 - Y1= 1.32 - 1.43= - 0.11 \newline
           Δ'2= Y3 - Y2= 2.54 - 1.32=   1.22
@@ -259,7 +259,7 @@ topics:
             answer: 4.44875
       - name: 'Newton con Diferencias Divididas'
         content: |
-          Sea fn  una variable discreta de n elementos y sea xn   otra variable discreta de n elementos los cuales corresponden, por parejas, a la imagen u ordenada y abcisa de los datos que se quieran interpolar, respectivamente.
+          Sea `f(n)` una variable discreta de `n` elementos y sea `xn` otra variable discreta de `n` elementos los cuales corresponden, por parejas, a la imagen u ordenada y abcisa de los datos que se quieran interpolar, respectivamente.
 
           Este método es muy algorítmico y resulta sumamente cómodo en determinados casos, sobre todo cuando se quiere calcular un polinomio interpolador de grado elevado.
 

@@ -2,10 +2,14 @@
 
 namespace App;
 
+use Eloquent;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Carbon;
 
 /**
  * App\Method.
@@ -15,22 +19,22 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property string $slug
  * @property string $name
  * @property string $content
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Exercises[] $exercises
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property-read Collection|Exercise[] $exercises
  * @property-read int|null $exercises_count
- * @property-read \App\Topic $topic
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Method newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Method newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Method query()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Method whereContent($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Method whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Method whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Method whereName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Method whereSlug($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Method whereTopicId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Method whereUpdatedAt($value)
- * @mixin \Eloquent
+ * @property-read Topic $topic
+ * @method static Builder|Method newModelQuery()
+ * @method static Builder|Method newQuery()
+ * @method static Builder|Method query()
+ * @method static Builder|Method whereContent($value)
+ * @method static Builder|Method whereCreatedAt($value)
+ * @method static Builder|Method whereId($value)
+ * @method static Builder|Method whereName($value)
+ * @method static Builder|Method whereSlug($value)
+ * @method static Builder|Method whereTopicId($value)
+ * @method static Builder|Method whereUpdatedAt($value)
+ * @mixin Eloquent
  */
 class Method extends Model
 {
