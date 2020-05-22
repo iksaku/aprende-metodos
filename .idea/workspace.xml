@@ -2,43 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c054debb-2cd4-48fe-9a16-f62a932dda65" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Method/Ranking.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/ExerciseTimingMiddleware.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/RankingSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/method/ranking.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.phpstorm.meta.php" beforeDir="false" afterPath="$PROJECT_DIR$/.phpstorm.meta.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_ide_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/_ide_helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exercise.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exercise.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Helpers/AnswerPipeline.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/AnswerPipeline.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MethodController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MethodController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Auth/Passwords/Confirm.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Method.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Method.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/MethodUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/MethodUserData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Rules/AnswerRule.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Rules/AnswerRule.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Topic.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Topic.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_15_045958_create_topics_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_15_045958_create_topics_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_15_050324_create_method_user_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_15_050324_create_method_user_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/data.yml" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/data.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/fontawesome.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/fontawesome.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/styles/app.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/styles/app.pcss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/app/exercise.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/exercise.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/app/method.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/method.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/components/app/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/app/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/errors/419.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/errors/419.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/auth/passwords/confirm.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,7 +257,7 @@
       <workItem from="1590100463430" duration="14984000" />
       <workItem from="1590173313894" duration="7108000" />
       <workItem from="1590180437036" duration="33000" />
-      <workItem from="1590180519660" duration="2068000" />
+      <workItem from="1590180519660" duration="4578000" />
     </task>
     <servers />
   </component>

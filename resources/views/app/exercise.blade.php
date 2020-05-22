@@ -6,7 +6,7 @@
 <x-use.katex />
 
 @section('content')
-    <div id="notice" class="h-full w-full markdown flex flex-col items-center justify-center hidden">
+    <div class="h-full w-full markdown flex flex-col items-center justify-center hidden">
         <h2>
             Tu tiempo se ha agotado
         </h2>
@@ -14,7 +14,7 @@
         <a href="{{ route('method', $method) }}">Regresar a la lectura del método.</a>
     </div>
 
-    <div id="content" class="w-full space-y-4 divide-y divide-gray-400">
+    <div class="w-full container mx-auto space-y-4 divide-y divide-gray-400">
         <div class="w-full markdown">
             <p>
                 Tiempo restante: <span id="time"></span>

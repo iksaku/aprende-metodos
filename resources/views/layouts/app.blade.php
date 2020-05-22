@@ -4,9 +4,11 @@
     <div class="min-h-screen w-full flex flex-col bg-gray-50">
         <x-app.header />
 
-        <div class="flex-grow flex items-stretch">
+        <div class="flex-grow flex">
             @if($showSidebar ?? true)
-                <x-app.sidebar />
+                <div class="flex-none relative w-64">
+                    <x-app.sidebar />
+                </div>
             @endif
 
             <div class="flex-grow p-4 overflow-y-auto">

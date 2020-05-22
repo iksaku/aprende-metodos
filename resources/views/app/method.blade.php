@@ -17,16 +17,16 @@
         </div>
     @endif
 
-    <div
-        x-cloak
-        x-data="{ tab: 'content' }"
-        class="w-full space-y-4 divide-y divide-gray-400"
-    >
-        <div class="space-y-4">
-            <h1 class="text-3xl font-bold">
-                {{ $method->name }}
-            </h1>
+    <div class="space-y-4">
+        <h1 class=" text-3xl font-bold">
+            {{ $method->name }}
+        </h1>
 
+        <div
+            x-cloak
+            x-data="{ tab: 'content' }"
+            class="w-full space-y-4"
+        >
             {{-- Tabs --}}
             <div class="tab-row flex items-center border-gray-400 md:rounded-lg overflow-hidden pl-5 -ml-5 -mr-4">
                 <button
@@ -49,10 +49,12 @@
             {{-- Lesson Contents --}}
             <div
                 x-show="tab === 'content'"
+                class="space-y-4 divide-y divide-gray-400"
             >
                 <div class="markdown pl-1">
                     @markdown($method->content)
                 </div>
+
                 @if($time === null && $method->exercises->count() >= 1)
                     <div class="w-full text-center pt-4">
                         <a

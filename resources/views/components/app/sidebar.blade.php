@@ -1,4 +1,4 @@
-<div class="flex-none w-64 text-gray-700 border-r p-4 overflow-auto scrolling-touch space-y-4">
+<div class="absolute h-full w-64 text-gray-700 border-r p-4 overflow-y-auto scrolling-touch space-y-4">
     <div class="w-full flex flex-col font-semibold uppercase space-y-4">
         <a href="{{ route('index') }}">
             Inicio
