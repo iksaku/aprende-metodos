@@ -3,13 +3,9 @@
         <a href="{{ route('index') }}">
             Inicio
         </a>
-
-        <a href="#">
-            Tabla de Puntuaciones
-        </a>
     </div>
 
-    <hr class="">
+    <hr>
 
     <div class="space-y-8">
         @foreach(App\Topic::all() as $topic)
@@ -21,7 +17,10 @@
                 <ul class="w-full list-outside list-disc pl-6 space-y-1">
                     @foreach($topic->methods as $method)
                         <li>
-                            <a href="{{ strlen($method->content) < 1 ? '#' : route('method', compact('method')) }}" class="hocus:text-blue-700">
+                            <a
+                                href="{{ strlen($method->content) < 1 ? '#' : route('method', $method) }}"
+                                class="hocus:text-blue-700 @if(url()->current() === route('method', $method)) text-blue-700 font-semibold @endif"
+                            >
                                 {{ $method->name }}
                             </a>
                         </li>

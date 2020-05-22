@@ -1,8 +1,8 @@
 import {library, dom} from '@fortawesome/fontawesome-svg-core'
-import {faLink, faUser} from '@fortawesome/free-solid-svg-icons'
+import {faLink, faSyncAlt, faUser} from '@fortawesome/free-solid-svg-icons'
 
 library.add(
-    faUser, faLink
+    faUser, faLink, faSyncAlt
 )
 
 dom.watch()

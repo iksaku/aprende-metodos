@@ -2,13 +2,20 @@
 
 namespace App\Helpers;
 
+use App\Exercise;
+
 class AnswerPipeline
 {
+    public static function isCorrect(Exercise $exercise, string $answer)
+    {
+        return self::make($exercise->answer) === self::make($answer);
+    }
+
     /**
      * @param string $answer
      * @return array|float
      */
-    public static function make(string $answer)
+    protected static function make(string $answer)
     {
         if (strpos($answer, ',') === false) {
             // The answer is not in 'matrix' format

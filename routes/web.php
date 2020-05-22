@@ -22,7 +22,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/', 'IndexController')->name('index');
 
     Route::post('logout', 'Auth\LogoutController')->name('logout');
-    Route::view('password/confirm', 'auth.passwords.confirm')->name('password.confirm');
 
     Route::prefix('method')->group(function () {
         Route::get('{method}', 'MethodController@showMethod')->name('method');

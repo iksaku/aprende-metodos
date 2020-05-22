@@ -4,38 +4,30 @@ namespace App\Http\Controllers;
 
 use App\Exercise;
 use App\Helpers\AnswerPipeline;
+use App\Http\Middleware\ExerciseTimingMiddleware;
 use App\Method;
-use App\MethodUser;
+use App\MethodUserData;
 use App\Rules\AnswerRule;
 use App\User;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class MethodController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(ExerciseTimingMiddleware::class)
+            ->only(['showExercise', 'checkExercise']);
+    }
+
     public function showMethod(Method $method)
     {
-        $user = Auth::user();
-
-        /*$prev = Method::whereId($method->id - 1)->first();
-
-        if ($prev !== null) {
-            $prevData = $this->getPivotData($user, $prev);
-
-            if (empty($prevData) || !$prevData->completed) {
-                session()->flash('alert', 'Antes de avanzar a los siguientes métodos, por favor completa el método en curso.');
-                return redirect()->route('method', $prev);
-            }
-        }*/
-
-        $pivot = $this->getPivotData($user, $method);
-
-        $completed = $pivot->completed ?? false;
-
-        $alert = session()->get('alert');
-
-        return view('app.method', compact('method', 'completed', 'alert'));
+        return view('app.method', [
+            'method' => $method,
+            'time' => $method->users()->find(Auth::user())->first()->pivot->time ?? null
+        ]);
     }
 
     public function showExercise(Method $method)
@@ -44,60 +36,64 @@ class MethodController extends Controller
 
         $method->users()->syncWithoutDetaching($user);
 
-        $pivot = $this->getPivotData($user, $method);
+        /** @var MethodUserData $pivot */
+        $pivot = $method->users()->find($user)->first()->pivot;
 
         if ($pivot->completed) {
             return redirect()->route('method', $method);
         }
 
-        if (empty(session()->get('ttl'))) {
-            $pivot->update(['attempt' => $pivot->attempt + 1]);
+        if (empty(session()->get('started_at'))) {
+            $pivot->update(['attempt' => ++$pivot->attempt]);
+
+            session()->flash('started_at', now()->getTimestamp());
+            session()->flash('closes_at', now()->addMinutes(15)->getTimestamp());
         }
 
-        $exercises = $method->exercises;
+        $closes_at = session()->get('closes_at');
 
-        $exercise = $exercises->get($pivot->attempt % $exercises->count());
+        $exercise = $method->exercises->get($pivot->attempt % $method->exercises->count());
 
-        $ttlToken = session()->get('ttl', now()->addMinutes(15)->getTimestamp());
-
-        return view('app.exercise', compact('method', 'exercise', 'ttlToken'));
+        return view('app.exercise', compact('method', 'exercise', 'closes_at'));
     }
 
     public function checkExercise(Request $request, Method $method)
     {
-        $ttl = $request->get('ttl');
-        if (empty($ttl) || now()->getTimestamp() > $ttl) abort(419);
+        $closes_at = session()->get('closes_at');
+        if (empty($closes_at) || now()->isAfter(Carbon::createFromTimestamp($closes_at))) {
+            abort(419);
+        }
 
-        session()->flash('ttl', $ttl);
-
-        $validatedData = $request->validate([
+        $data = $request->validate([
             'answer' => ['required', new AnswerRule()]
         ]);
 
-        $userAnswer = AnswerPipeline::make($validatedData['answer']);
-
         $user = Auth::user();
 
-        /** @var MethodUser $pivot */
-        $pivot = $this->getPivotData($user, $method);
-        /** @var Exercise[]|Collection $exercises */
-        $exercises = $method->exercises;
-        /** @var Exercise $exercise */
-        $exercise = $exercises->get($pivot->attempt % $exercises->count());
+        /** @var MethodUserData $pivot */
+        $pivot = $method->users()->find($user)->first()->pivot ?? null;
 
-        if (AnswerPipeline::make($exercise->answer) === $userAnswer) {
-            $pivot->update(['completed' => true]);
-            return redirect()->route('method', compact('method'));
-        } else {
-            session()->forget('ttl');
-            session()->flash('alert', 'La respuesta no es correcta, porfavor lee nuevamente el capítulo e intentalo denuevo.');
+        if (empty($pivot)) {
+            return redirect()->route('method', $method);
+        }
+
+        /** @var Exercise $exercise */
+        $exercise = $method->exercises->get($pivot->attempt % $method->exercises->count());
+
+        if (AnswerPipeline::isCorrect($exercise, $data['answer'])) {
+            $started_at = Carbon::createFromTimestamp(session()->get('started_at'));
+
+            $pivot->update([
+                'time' => $started_at->diffInSeconds(now())
+            ]);
 
             return redirect()->route('method', compact('method'));
         }
-    }
 
-    private function getPivotData(User $user, Method $method)
-    {
-        return $method->users()->whereId($user->id)->first()->pivot ?? null;
+        session()->forget('ttl');
+
+        session()->flash('alert', 'La respuesta no es correcta, porfavor lee nuevamente el capítulo e intentalo de nuevo.');
+
+        return redirect()->route('method', compact('method'));
     }
 }

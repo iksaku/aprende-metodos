@@ -8,41 +8,48 @@ topics:
           Se utiliza una notación de `g(x)` la cual designa que se trata de un polinomio de primer grado.
 
           Se tiene el término:
-          $$
-          f(b)-f(a)/b-a
-          $$
+
+            $$
+            f(b)-f(a)/b-a
+            $$
+
           El cual presenta una aproximación con una diferencia divida a la primer derivada, esto quiere decir que si el intérvalo es menor entre los datos que se tengan, la paroximación que se obtenga será mejor.
 
 
           ### ¿Como resolver un ejercicio de interpolación lineal?
 
           1. Como primer paso define el valor que tendrá `x`.
-          $$
-          x=7
-          $$
+
+            $$
+            x=7
+            $$
 
           2. Suponga que tiene Ln 6 y Ln 2, cálcule el valor de estos valores con su cálculadora científica.
-          $$
-          Ln 6= 1.791759469 \newline
-          Ln 2= 0.69314718
-          $$
+
+            $$
+            Ln 6= 1.791759469 \newline
+            Ln 2= 0.69314718
+            $$
 
           3. Tome como valor de a el primer valor de Ln (sin cálcular) y como valor de `b` el segundo valor de Ln (sin cálcular).
-          $$
-          a=6 \newline
-          b=2
-          $$
+
+            $$
+            a=6 \newline
+            b=2
+            $$
 
           4. Para definir el valor de f(a) y f(b), tome los valores de Ln respectivamente.
-          $$
-          f(a)= 1.791759469 \newline
-          f(b)= 0.69314718
-          $$
+
+            $$
+            f(a)= 1.791759469 \newline
+            f(b)= 0.69314718
+            $$
 
           5. Para obtener el valor de g(x), utilice la fórmula:
-          $$
-          g(x)= f(a)-f(b)/b-a (x-a) + f(a)
-          $$
+
+            $$
+            g(x)= f(a)-f(b)/b-a (x-a) + f(a)
+            $$
         exercises:
           - content: |
               Resuelva el siguiente ejercicio por el método de interpolación líneal.

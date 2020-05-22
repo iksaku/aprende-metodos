@@ -5,7 +5,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2020-05-15 23:12:28.
+    * Generated on 2020-05-21 19:20:42.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -142,6 +142,7 @@ namespace PHPSTORM_META {
         'log' => \Illuminate\Log\LogManager::class,
         'mail.manager' => \Illuminate\Mail\MailManager::class,
         'mailer' => \Illuminate\Mail\Mailer::class,
+        'markdown' => \League\CommonMark\CommonMarkConverter::class,
         'memcached.connector' => \Illuminate\Cache\MemcachedConnector::class,
         'migration.creator' => \Illuminate\Database\Migrations\MigrationCreator::class,
         'migration.repository' => \Illuminate\Database\Migrations\DatabaseMigrationRepository::class,
@@ -296,6 +297,7 @@ namespace PHPSTORM_META {
         'log' => \Illuminate\Log\LogManager::class,
         'mail.manager' => \Illuminate\Mail\MailManager::class,
         'mailer' => \Illuminate\Mail\Mailer::class,
+        'markdown' => \League\CommonMark\CommonMarkConverter::class,
         'memcached.connector' => \Illuminate\Cache\MemcachedConnector::class,
         'migration.creator' => \Illuminate\Database\Migrations\MigrationCreator::class,
         'migration.repository' => \Illuminate\Database\Migrations\DatabaseMigrationRepository::class,
@@ -450,6 +452,7 @@ namespace PHPSTORM_META {
         'log' => \Illuminate\Log\LogManager::class,
         'mail.manager' => \Illuminate\Mail\MailManager::class,
         'mailer' => \Illuminate\Mail\Mailer::class,
+        'markdown' => \League\CommonMark\CommonMarkConverter::class,
         'memcached.connector' => \Illuminate\Cache\MemcachedConnector::class,
         'migration.creator' => \Illuminate\Database\Migrations\MigrationCreator::class,
         'migration.repository' => \Illuminate\Database\Migrations\DatabaseMigrationRepository::class,
@@ -604,6 +607,7 @@ namespace PHPSTORM_META {
         'log' => \Illuminate\Log\LogManager::class,
         'mail.manager' => \Illuminate\Mail\MailManager::class,
         'mailer' => \Illuminate\Mail\Mailer::class,
+        'markdown' => \League\CommonMark\CommonMarkConverter::class,
         'memcached.connector' => \Illuminate\Cache\MemcachedConnector::class,
         'migration.creator' => \Illuminate\Database\Migrations\MigrationCreator::class,
         'migration.repository' => \Illuminate\Database\Migrations\DatabaseMigrationRepository::class,
@@ -758,6 +762,7 @@ namespace PHPSTORM_META {
         'log' => \Illuminate\Log\LogManager::class,
         'mail.manager' => \Illuminate\Mail\MailManager::class,
         'mailer' => \Illuminate\Mail\Mailer::class,
+        'markdown' => \League\CommonMark\CommonMarkConverter::class,
         'memcached.connector' => \Illuminate\Cache\MemcachedConnector::class,
         'migration.creator' => \Illuminate\Database\Migrations\MigrationCreator::class,
         'migration.repository' => \Illuminate\Database\Migrations\DatabaseMigrationRepository::class,
@@ -912,6 +917,7 @@ namespace PHPSTORM_META {
         'log' => \Illuminate\Log\LogManager::class,
         'mail.manager' => \Illuminate\Mail\MailManager::class,
         'mailer' => \Illuminate\Mail\Mailer::class,
+        'markdown' => \League\CommonMark\CommonMarkConverter::class,
         'memcached.connector' => \Illuminate\Cache\MemcachedConnector::class,
         'migration.creator' => \Illuminate\Database\Migrations\MigrationCreator::class,
         'migration.repository' => \Illuminate\Database\Migrations\DatabaseMigrationRepository::class,
@@ -1066,6 +1072,7 @@ namespace PHPSTORM_META {
         'log' => \Illuminate\Log\LogManager::class,
         'mail.manager' => \Illuminate\Mail\MailManager::class,
         'mailer' => \Illuminate\Mail\Mailer::class,
+        'markdown' => \League\CommonMark\CommonMarkConverter::class,
         'memcached.connector' => \Illuminate\Cache\MemcachedConnector::class,
         'migration.creator' => \Illuminate\Database\Migrations\MigrationCreator::class,
         'migration.repository' => \Illuminate\Database\Migrations\DatabaseMigrationRepository::class,
@@ -1220,6 +1227,7 @@ namespace PHPSTORM_META {
         'log' => \Illuminate\Log\LogManager::class,
         'mail.manager' => \Illuminate\Mail\MailManager::class,
         'mailer' => \Illuminate\Mail\Mailer::class,
+        'markdown' => \League\CommonMark\CommonMarkConverter::class,
         'memcached.connector' => \Illuminate\Cache\MemcachedConnector::class,
         'migration.creator' => \Illuminate\Database\Migrations\MigrationCreator::class,
         'migration.repository' => \Illuminate\Database\Migrations\DatabaseMigrationRepository::class,

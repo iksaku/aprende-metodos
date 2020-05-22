@@ -9,11 +9,9 @@ class IndexController extends Controller
 {
     public function __invoke()
     {
-        $user = Auth::user();
-        $completedMethods = $user->methods()->wherePivot('completed', true)->count();
-
-        $totalMethods = Method::count();
-
-        return view('app.index', compact('completedMethods', 'totalMethods'));
+        return view('app.index', [
+            'completedMethods' => Auth::user()->completed_methods_count,
+            'totalMethods' => Method::count()
+        ]);
     }
 }

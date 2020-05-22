@@ -21,8 +21,8 @@ class CreateMethodUserTable extends Migration
                 ->constrained()
                 ->cascadeOnDelete();
 
-            $table->integer('attempt')->default(0);
-            $table->boolean('completed')->default(false);
+            $table->unsignedInteger('attempt')->default(0);
+            $table->unsignedInteger('time')->nullable();
         });
     }
 

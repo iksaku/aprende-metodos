@@ -14,7 +14,7 @@
         <a href="{{ route('method', $method) }}">Regresar a la lectura del método.</a>
     </div>
 
-    <div id="content" class="w-full">
+    <div id="content" class="w-full space-y-4 divide-y divide-gray-400">
         <div class="w-full markdown">
             <p>
                 Tiempo restante: <span id="time"></span>
@@ -27,35 +27,37 @@
             @markdown($exercise->content)
         </div>
 
-        <form method="post" action="{{ route('method.exercise', $method) }}" class="w-full block text-center">
-            @csrf
-            <input type="hidden" name="ttl" value="{{ $ttlToken }}">
+        <div class="w-full text-center pt-4">
+            <form method="post" action="{{ route('method.exercise', $method) }}">
+                @csrf
 
-            <label class="w-1/4 mx-auto block mb-4">
-                <span class="text-gray-700">
-                    Respuesta
-                </span>
-                <input
-                    required
-                    autocomplete="off"
-                    type="text"
-                    name="answer"
-                    value="{{ old('answer') }}"
-                    class="form-input w-full block @error('answer') border-red-500 @enderror"
-                >
-                @error('answer')
-                    <span class="text-sm text-red-500 italic">
-                        {{ $message }}
+                <label class="w-1/4 mx-auto block mb-4">
+                    <span class="text-gray-700">
+                        Respuesta
                     </span>
-                @enderror
-            </label>
-            <button
-                type="submit"
-                class="text-gray-100 font-bold bg-blue-500 hover:bg-blue-700 focus:bg-blue-700 focus:outline-none focus:shadow-outline px-4 py-2 rounded-lg"
-            >
-                Comprobar Respuesta
-            </button>
-        </form>
+                    <input
+                        required
+                        autocomplete="off"
+                        type="text"
+                        name="answer"
+                        value="{{ old('answer') }}"
+                        class="form-input w-full block @error('answer') border-red-500 @enderror"
+                    >
+                    @error('answer')
+                        <span class="text-sm text-red-500 italic">
+                            {{ $message }}
+                        </span>
+                    @enderror
+                </label>
+
+                <button
+                    type="submit"
+                    class="text-gray-100 font-bold bg-blue-500 hover:bg-blue-700 focus:bg-blue-700 focus:outline-none focus:shadow-outline px-4 py-2 rounded-lg"
+                >
+                    Comprobar Respuesta
+                </button>
+            </form>
+        </div>
     </div>
 @endsection
 
@@ -65,7 +67,7 @@
         const notice = document.getElementById('notice');
 
         const timer = document.getElementById('time');
-        const ttl = parseInt('{{ $ttlToken * 1000 }}');
+        const ttl = parseInt('{{ $closes_at * 1000 }}');
 
         function updateTimer() {
             let now = new Date().getTime();
